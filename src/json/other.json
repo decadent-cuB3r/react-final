@@ -1,32 +1,57 @@
 [
-    {
-        "id": "opdsf8",
-        "name": "ST百家樂/德州撲克桌/21點",
-        "price": "35000",
-        "image": "https://www.eastking.com.tw/upload/peripheral/casino1-2B.jpg"
-      },
-      {
-        "id": "42f98s",
-        "name": "ALL IN (片/紅桃)",
-        "price": "1200",
-        "image": "https://www.eastking.com.tw/upload/peripheral/1RX-33-1-m.jpg"
-      },
-      {
-        "id": "39cn3d",
-        "name": "自動撲克洗牌機(鐵制二副洗)",
-        "price": "500",
-        "image": "https://www.eastking.com.tw/upload/peripheral/pokos_m.jpg"
-      },
-      {
-        "id": "idhdo3",
-        "name": "中骨牌蓋牌盒",
-        "price": "2500",
-        "image": "https://www.eastking.com.tw/upload/peripheral/casino3-8B.jpg"
-      },
-      {
-        "id": "qbuw38",
-        "name": "德州撲克DEALER",
-        "price": "1500",
-        "image": "https://www.eastking.com.tw/upload/peripheral/dealer-2_m.jpg"
-      }
+  {
+    "id": "opdsf8",
+    "name": "ST百家樂/德州撲克桌/21點",
+    "price": 35000,
+    "image": "/images/otherproducts/tb-casino.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "張"
+  },
+  {
+    "id": "42f98s",
+    "name": "ALL IN (片/紅桃)",
+    "price": 1200,
+    "image": "/images/otherproducts/allIn.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "片"
+  },
+  {
+    "id": "39cn3d",
+    "name": "自動撲克洗牌機(鐵制二副洗)",
+    "price": 500,
+    "image": "/images/otherproducts/poker-wash.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "台"
+  },
+  {
+    "id": "idhdo3",
+    "name": "中骨牌蓋牌盒",
+    "price": 2500,
+    "image": "/images/otherproducts/domino.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "盒"
+  },
+  {
+    "id": "qbuw38",
+    "name": "德州撲克DEALER",
+    "price": 1500,
+    "image": "/images/otherproducts/dealer-button.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "片"
+  }
 ]

@@ -7,6 +7,7 @@ import cart from "../images/cart.png";
 import fb from "../images/fb.png";
 import line from "../images/line.png";
 import Drawer from "./drawer";
+import NavItem from "./NavItem";
 
 export default function Header() {
   const {
@@ -22,18 +23,21 @@ export default function Header() {
     <Menu>
       <Menu.ItemGroup title="商品分類">
         <Menu.Item>
-          <Link to="product/tables">電動麻將桌</Link>
+          <NavItem to="product/tables">電動麻將桌</NavItem>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/product/tableAccessory">電動麻將桌配件</Link>
+          <NavItem to="/product/tableAccessory">電動麻將桌配件</NavItem>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/product/mahjong">手打麻將</Link>
+          <NavItem to="/product/mahjong">手打麻將</NavItem>
+        </Menu.Item>
+        <Menu.Item>
+          <NavItem to="/product/others">周邊商品</NavItem>
         </Menu.Item>
       </Menu.ItemGroup>
       <Menu.ItemGroup title="其他">
         <Menu.Item>
-          <Link to="/compare">商品比較</Link>
+          <NavItem to="/compare">商品比較</NavItem>
         </Menu.Item>
       </Menu.ItemGroup>
     </Menu>

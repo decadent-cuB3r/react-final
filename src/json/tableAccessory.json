@@ -1,32 +1,57 @@
 [
-    {
-        "id": "tb2Jd1",
-        "name": "電動麻將桌專用籌碼盒裝(100P 鋁盒)",
-        "price": "1000",
-        "image": "https://www.eastking.com.tw/upload/peripheral/top_100p_2.jpg"
-      },
-      {
-        "id": "djhksd",
-        "name": "名媛茶几",
-        "price": "1200",
-        "image": "https://www.eastking.com.tw/upload/peripheral/amtr_m.jpg"
-      },
-      {
-        "id": "2nfe8e",
-        "name": "實用茶几",
-        "price": "500",
-        "image": "https://www.eastking.com.tw/upload/peripheral/m_g6ru.jpg"
-      },
-      {
-        "id": "8wnrfi",
-        "name": "卡夢椅",
-        "price": "2500",
-        "image": "https://www.eastking.com.tw/upload/peripheral/m_d83_f.jpg"
-      },
-      {
-        "id": "cnejk8",
-        "name": "電動麻將桌木蓋板(珠光紫紅色)",
-        "price": "1500",
-        "image": "https://www.eastking.com.tw/upload/peripheral/m_red_f.jpg"
-      }
+  {
+    "id": "tb2Jd1",
+    "name": "電動麻將桌專用籌碼盒裝(100P 鋁盒)",
+    "price": 1000,
+    "image": "/images/otherproducts/100p.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "盒"
+  },
+  {
+    "id": "djhksd",
+    "name": "名媛茶几",
+    "price": 1200,
+    "image": "/images/otherproducts/tb-pink.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "張"
+  },
+  {
+    "id": "2nfe8e",
+    "name": "實用茶几",
+    "price": 500,
+    "image": "/images/otherproducts/tb-black.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "張"
+  },
+  {
+    "id": "8wnrfi",
+    "name": "卡夢椅",
+    "price": 2500,
+    "image": "/images/otherproducts/st-carbon.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 0,
+    "isTable": false,
+    "quantifier": "張"
+  },
+  {
+    "id": "cnejk8",
+    "name": "電動麻將桌木蓋板(珠光紫紅色)",
+    "price": 1500,
+    "image": "/images/otherproducts/cover.jpeg",
+    "description": [""],
+    "description_payment": [""],
+    "countInStock": 3,
+    "isTable": false,
+    "quantifier": "張"
+  }
 ]
