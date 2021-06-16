@@ -9,6 +9,7 @@ import line from "../images/line.png";
 import Drawer from "./drawer";
 import NavItem from "./NavItem";
 
+
 export default function Header() {
   const {
     state: { cartItems },
