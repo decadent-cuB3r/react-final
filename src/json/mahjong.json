@@ -1,0 +1,155 @@
+[
+  {
+    "id": "Kn4Et1",
+    "name": "Hello Kitty 繽紛版麻將套裝收藏組合",
+    "sku": "sku_313355",
+    "price": 14800,
+    "image": "https://www.eastking.com.tw/upload/peripheral/mahjong-261B.jpg",
+    "description": [
+      "25秒急速上牌",
+      "最新型防作弊系統",
+      "除濕防潮專利設計",
+      "故障自動排除系統",
+      "大骰子設計",
+      "大液晶面板設計",
+      "洗牌超靜音設計",
+      "專用型推筒子模式",
+      "機台一年保固",
+      "核心馬達終身保固",
+      "加三千元可升級折疊款"
+    ],
+    "description_payment": [
+      "付款方式",
+      "貨到付款",
+      "ATM轉帳(中國信託)",
+      "送貨方式",
+      "面交/自取 - 免運費",
+      "五吉宅急便 - 免運費"
+    ],
+    "currency": "NTD",
+    "countInStock": 3
+  },
+  {
+    "id": "lYGFuI",
+    "name": "Duncan X 東方不敗麻將套裝組_電動桌兩用款",
+    "sku": "sku_313356",
+    "price": 16800,
+    "image": "https://www.eastking.com.tw/upload/peripheral/m_duncan_1.jpg",
+    "description": [
+      "四邊USB手機充電",
+      "25秒急速上牌",
+      "最新型防作弊系統",
+      "除濕防潮專利設計",
+      "故障自動排除系統",
+      "大骰子設計",
+      "大液晶面板設計",
+      "洗牌超靜音設計",
+      "專用型推筒子模式",
+      "機台一年保固",
+      "核心馬達終身保固",
+      "加三千元可升級折疊款"
+    ],
+    "description_payment": [
+      "付款方式",
+      "貨到付款",
+      "ATM轉帳(中國信託)",
+      "送貨方式",
+      "面交/自取 - 免運費",
+      "五吉宅急便 - 免運費"
+    ],
+    "currency": "NTD",
+    "countInStock": 6
+  },
+  {
+    "id": "lyBcfV",
+    "name": "東方不敗藝術手工毫雕四大名著麻將",
+    "sku": "sku_622147",
+    "price": 25800,
+    "image": "https://www.eastking.com.tw/upload/peripheral/mahjong-1-3B.jpg",
+    "description": [
+      "四邊USB手機充電",
+      "25秒急速上牌",
+      "最新型防作弊系統",
+      "熱風除濕防潮專利設計",
+      "故障自動排除系統",
+      "大骰子設計",
+      "大液晶面板設計",
+      "洗牌超靜音設計",
+      "專用型推筒子模式",
+      "機台一年保固",
+      "核心馬達終身保固",
+      "加三千元可升級折疊款"
+    ],
+    "description_payment": [
+      "付款方式",
+      "貨到付款",
+      "ATM轉帳(中國信託)",
+      "送貨方式",
+      "面交/自取 - 免運費",
+      "五吉宅急便 - 免運費"
+    ],
+    "currency": "NTD",
+    "countInStock": 4
+  },
+  {
+    "id": "bI2Fy1",
+    "name": "東方無聲派",
+    "sku": "sku_125983",
+    "price": 30800,
+    "image": "https://www.eastking.com.tw/upload/peripheral/mahjong-132B.jpg",
+    "description": [
+      "四邊USB手機充電",
+      "25秒急速上牌",
+      "最新型防作弊系統",
+      "熱風除濕防潮專利設計",
+      "故障自動排除系統",
+      "大骰子設計",
+      "大液晶面板設計",
+      "洗牌超靜音設計",
+      "專用型推筒子模式",
+      "機台兩年保固",
+      "核心馬達終身保固",
+      "加三千元可升級折疊款"
+    ],
+    "description_payment": [
+      "付款方式",
+      "貨到付款",
+      "ATM轉帳(中國信託)",
+      "送貨方式",
+      "面交/自取 - 免運費",
+      "五吉宅急便 - 免運費"
+    ],
+    "currency": "NTD",
+    "countInStock": 5
+  },
+  {
+    "id": "3g8m5x",
+    "name": "蛋黃哥懶得打麻將組",
+    "sku": "sku_559961",
+    "price": 40000,
+    "image": "https://www.eastking.com.tw/upload/peripheral/mahjong-G601B.jpg",
+    "description": [
+      "四邊USB手機充電",
+      "25秒急速上牌",
+      "最新型防作弊系統",
+      "除濕防潮專利設計",
+      "故障自動排除系統",
+      "大骰子設計",
+      "大液晶面板設計",
+      "洗牌超靜音設計",
+      "專用型推筒子模式",
+      "機台兩年保固",
+      "核心馬達終身保固"
+    ],
+    "description_payment": [
+      "付款方式",
+      "貨到付款",
+      "ATM轉帳(中國信託)",
+      "送貨方式",
+      "面交/自取 - 免運費",
+      "五吉宅急便 - 免運費"
+    ],
+    "currency": "NTD",
+    "countInStock": 2
+  }
+]
