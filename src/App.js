@@ -5,6 +5,7 @@ import ProductPage from "./pages/Product";
 import DetailPage from "./pages/Details";
 import ShoppingPage from "./pages/Shopping";
 import Compare from "./pages/Compare";
+import Feeder from "./pages/Feeder";
 
 import { StoreProvider } from "./context/index";
 
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/detail/:productId" component={DetailPage} />
           <Route exact path="/shoppingbag" component={ShoppingPage} />
           <Route exact path="/compare" component={Compare} />
+          <Route path="/feeder" component={Feeder} />
         </Switch>
       </BrowserRouter>
     </StoreProvider>
