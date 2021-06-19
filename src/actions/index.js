@@ -5,14 +5,10 @@ import {
   CART_ITEM_REMOVE,
   Compare_ITEM_ADD,
   Compare_ITEM_REMOVE,
+  SET_PRODUCT_DETAIL,
+  SET_PAGE_CONTENT,
 } from "../utils/constants";
-
-export const pageContentsSet = (dispatch, products) => {
-  dispatch({
-    type: SET_PRODUCT_ITEMS,
-    payload: products,
-  });
-};
+import { getProductById, getProducts } from "../api";
 
 export const activeNavItemSet = (dispatch, activeNavItem) => {
   dispatch({
@@ -43,24 +39,73 @@ export const cartItemRemove = (dispatch, productId) => {
   });
 };
 
-export const compareItemAdd = (dispatch, product, qty) => {
-  const item = {
-    id: product.id,
-    image: product.image,
-    name: product.name,
-    description: product.description,
-    price: product.price,
-    qty,
-  };
+//mutipule json files for each category
+export const pageContentsSet = (dispatch, products) => {
   dispatch({
-    type: Compare_ITEM_ADD,
-    payload: item,
+    type: SET_PRODUCT_ITEMS,
+    payload: products,
   });
 };
 
-export const compareItemRemove = (dispatch, productId) => {
-  dispatch({
-    type: Compare_ITEM_REMOVE,
-    payload: productId,
-  });
-};
+//in allProducts add a category tag for page to be set with different items
+export const setProductDetail = async (dispatch, productId, qty) => {
+  const product = await getProductById(productId);
+  if (qty === 0)
+    dispatch({
+      type: SET_PRODUCT_DETAIL,
+      payload: {
+        product,
+      }
+    })
+  else
+    dispatch({
+      type: SET_PRODUCT_DETAIL,
+      payload: {
+        product,
+        qty,
+      }
+    })
+}
+
+export const setPage = async (dispatch, url, title) => {
+  let products = [];
+  // dispatch({
+  //   type: SET_PAGE_TITLE,
+  //   payload: title,
+  // });
+  try {
+    products = await getProducts(url);
+    dispatch({
+      type: SET_PAGE_CONTENT,
+      payload: { title, products },
+    });
+    dispatch({
+      type: SET_NAVBAR_ACTIVEITEM,
+      payload: url,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// export const compareItemAdd = (dispatch, product, qty) => {
+//   const item = {
+//     id: product.id,
+//     image: product.image,
+//     name: product.name,
+//     description: product.description,
+//     price: product.price,
+//     qty,
+//   };
+//   dispatch({
+//     type: Compare_ITEM_ADD,
+//     payload: item,
+//   });
+// };
+
+// export const compareItemRemove = (dispatch, productId) => {
+//   dispatch({
+//     type: Compare_ITEM_REMOVE,
+//     payload: productId,
+//   });
+// };

@@ -4,6 +4,7 @@ import mahjong from "../json/mahjong.json";
 import tableAccessory from "../json/tableAccessory.json";
 import other from "../json/other.json";
 import firebase from "firebase";
+import jsonInfo from "../json/jsonInfo.json"
 
 const firebaseConfig = {
   apiKey: "AIzaSyA32dvcFypCXIFhuD49i0xBjvb5R5Su4oc",
@@ -36,6 +37,30 @@ export const getJSON = (url) => {
 const wujiCollectionRef = firebase.firestore().collection("WuJiMahjong");
 const jsonDocRef = wujiCollectionRef.doc("json");
 const allProductsCollectionRef = jsonDocRef.collection("allProducts");
+
+export const getProductById = async (productId) => {
+  // REFERENCE PRODUCTS COLLECTION
+  const doc = await allProductsCollectionRef.doc(productId).get();
+  return doc.data()
+}
+
+export const getProducts = async (url) => {
+  const collection = jsonInfo.find(element => element.url === url);
+  const collectionName = collection.name || "allProducts";
+  console.log(collectionName)
+  let jsonProducts = [];
+
+  // QUERY PRODUCTS
+  let querySnapshot;
+  if (collectionName === "allProducts")
+    querySnapshot = await allProductsCollectionRef.get();
+  else
+    querySnapshot = await allProductsCollectionRef.where("category", "==", collectionName).get();
+  querySnapshot.forEach((doc) => {
+    jsonProducts.push(doc.data());
+  });
+  return jsonProducts;
+}
 
 export const feedProducts = () => {
   products.forEach((product) => {

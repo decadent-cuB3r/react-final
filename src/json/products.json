@@ -1,6 +1,7 @@
 [
   {
     "id": "1tE4nK",
+    "category": "table",
     "name": "一吉郎",
     "price": 14800,
     "image": "/images/tables/first-chicken.png",
@@ -31,6 +32,7 @@
   },
   {
     "id": "IuFGYl",
+    "category": "table",
     "name": "二吉郎",
     "price": 16800,
     "image": "/images/tables/two-chicken.png",
@@ -62,6 +64,7 @@
   },
   {
     "id": "VfcByl",
+    "category": "table",
     "name": "三吉郎",
     "price": 25800,
     "image": "/images/tables/three-chicken.png",
@@ -93,6 +96,7 @@
   },
   {
     "id": "1yF2Ib",
+    "category": "table",
     "name": "四吉郎",
     "price": 30800,
     "image": "/images/tables/four-chicken.png",
@@ -124,6 +128,7 @@
   },
   {
     "id": "x5m8g3",
+    "category": "table", 
     "name": "五吉郎",
     "price": 40000,
     "image": "/images/tables/five-chicken.png",
@@ -154,6 +159,7 @@
   },
   {
     "id": "tb2Jd1",
+    "category": "accessories",
     "name": "電動麻將桌專用籌碼盒裝(100P 鋁盒)",
     "price": 1000,
     "image": "/images/otherproducts/100p.jpeg",
@@ -165,6 +171,7 @@
   },
   {
     "id": "djhksd",
+    "category": "accessories",
     "name": "名媛茶几",
     "price": 1200,
     "image": "/images/otherproducts/tb-pink.jpeg",
@@ -176,6 +183,7 @@
   },
   {
     "id": "2nfe8e",
+    "category": "accessories",
     "name": "實用茶几",
     "price": 500,
     "image": "/images/otherproducts/tb-black.jpeg",
@@ -187,6 +195,7 @@
   },
   {
     "id": "8wnrfi",
+    "category": "accessories",
     "name": "卡夢椅",
     "price": 2500,
     "image": "/images/otherproducts/st-carbon.jpeg",
@@ -198,6 +207,7 @@
   },
   {
     "id": "cnejk8",
+    "category": "accessories",
     "name": "電動麻將桌木蓋板(珠光紫紅色)",
     "price": 1500,
     "image": "/images/otherproducts/cover.jpeg",
@@ -209,6 +219,7 @@
   },
   {
     "id": "Kn4Et1",
+    "category": "mahjong",
     "name": "Hello Kitty 繽紛版麻將套裝收藏組合",
     "price": 14800,
     "image": "/images/otherproducts/hellokitty-mj.jpeg",
@@ -220,6 +231,7 @@
   },
   {
     "id": "lYGFuI",
+    "category": "mahjong",
     "name": "Duncan X 東方不敗麻將套裝組_電動桌兩用款",
     "price": 16800,
     "image": "/images/otherproducts/duncan-mj.jpeg",
@@ -231,6 +243,7 @@
   },
   {
     "id": "lyBcfV",
+    "category": "mahjong",
     "name": "東方不敗藝術手工毫雕四大名著麻將",
     "price": 25800,
     "image": "/images/otherproducts/antique-mj.jpeg",
@@ -242,6 +255,7 @@
   },
   {
     "id": "bI2Fy1",
+    "category": "mahjong",
     "name": "東方無聲派",
     "price": 30800,
     "image": "/images/otherproducts/silence-mj.jpeg",
@@ -253,6 +267,7 @@
   },
   {
     "id": "3g8m5x",
+    "category": "mahjong",
     "name": "蛋黃哥懶得打麻將組",
     "price": 40000,
     "image": "/images/otherproducts/yoke-mj.jpeg",
@@ -264,6 +279,7 @@
   },
   {
     "id": "opdsf8",
+    "category": "other",
     "name": "ST百家樂/德州撲克桌/21點",
     "price": 35000,
     "image": "/images/otherproducts/tb-casino.jpeg",
@@ -275,6 +291,7 @@
   },
   {
     "id": "42f98s",
+    "category": "other",
     "name": "ALL IN (片/紅桃)",
     "price": 1200,
     "image": "/images/otherproducts/allIn.jpeg",
@@ -286,6 +303,7 @@
   },
   {
     "id": "39cn3d",
+    "category": "other",
     "name": "自動撲克洗牌機(鐵制二副洗)",
     "price": 500,
     "image": "/images/otherproducts/poker-wash.jpeg",
@@ -297,6 +315,7 @@
   },
   {
     "id": "idhdo3",
+    "category": "other",
     "name": "中骨牌蓋牌盒",
     "price": 2500,
     "image": "/images/otherproducts/domino.jpeg",
@@ -308,6 +327,7 @@
   },
   {
     "id": "qbuw38",
+    "category": "other",
     "name": "德州撲克DEALER",
     "price": 1500,
     "image": "/images/otherproducts/dealer-button.jpeg",

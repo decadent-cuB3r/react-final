@@ -1,0 +1,22 @@
+[
+    {
+        "name": "allproducts",
+        "url": "/"
+    },
+    {
+        "name": "tables",
+        "url": "/product/tables"
+    },
+    {
+        "name": "mahjong",
+        "url": "/product/mahjong"
+    },
+    {
+        "name": "tableAccessory",
+        "url": "/product/tableAccessory"
+    },
+    {
+        "name": "other",
+        "url": "/product/other"
+    }
+]

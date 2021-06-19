@@ -1,6 +1,15 @@
+// SET PAGE CONTENT
 export const SET_PRODUCT_ITEMS = 'SET_PRODUCT_ITEMS';
 export const SET_NAVBAR_ACTIVEITEM = 'SET_NAVBAR_ACTIVEITEM';
+export const SET_PAGE_CONTENT = 'SET_PAGE_CONTENT';
+export const SET_PRODUCT_DETAIL = "SET_PRODUCT_DETAIL";
+
+// SET SHOPPING CART
 export const CART_ITEM_ADD = 'CART_ITEM_ADD';
 export const CART_ITEM_REMOVE = 'CART_ITEM_REMOVE';
-export const Compare_ITEM_ADD = 'Compare_ITEM_ADD';
-export const Compare_ITEM_REMOVE = 'Compare_ITEM_REMOVE';
+
+
+
+// SET COMPARE ITEMS
+// export const Compare_ITEM_ADD = 'Compare_ITEM_ADD';
+// export const Compare_ITEM_REMOVE = 'Compare_ITEM_REMOVE';

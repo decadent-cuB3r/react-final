@@ -9,11 +9,11 @@ export default function TableDetailImg() {
   return (
     <div className="TableDetail">
       <img className="TableDetail-img" src={detailOne} alt="404 NOT Found" />
-      <img className="TableDetail-img" src={detailTwo} alt="404 NOT Found" />
-      <img className="TableDetail-img" src={detailThree} alt="404 NOT Found" />
-      <img className="TableDetail-img" src={detailFour} alt="404 NOT Found" />
-      <img className="TableDetail-img" src={detailFive} alt="404 NOT Found" />
-      <img className="TableDetail-img" src={detailSix} alt="404 NOT Found" />
+      {/* <img className="TableDetail-img" src={detailTwo} alt="404 NOT Found" /> */}
+      {/* <img className="TableDetail-img" src={detailThree} alt="404 NOT Found" /> */}
+      {/* <img className="TableDetail-img" src={detailFour} alt="404 NOT Found" /> */}
+      {/* <img className="TableDetail-img" src={detailFive} alt="404 NOT Found" /> */}
+      {/* <img className="TableDetail-img" src={detailSix} alt="404 NOT Found" /> */}
     </div>
   );
 }
