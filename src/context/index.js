@@ -16,9 +16,9 @@ let cartItems = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
   : [];
 
-let compareItems = localStorage.getItem("compareItems")
-  ? JSON.parse(localStorage.getItem("compareItems"))
-  : [];
+// let compareItems = localStorage.getItem("compareItems")
+//   ? JSON.parse(localStorage.getItem("compareItems"))
+//   : [];
 
 const initialState = {
   page: {
@@ -28,7 +28,6 @@ const initialState = {
     activeItem: "/",
   },
   cartItems,
-  compareItems,
 };
 
 function reducer(state, action) {

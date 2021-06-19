@@ -6,6 +6,7 @@ import other from "../json/other.json";
 import firebase from "firebase";
 import jsonInfo from "../json/jsonInfo.json"
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyA32dvcFypCXIFhuD49i0xBjvb5R5Su4oc",
   authDomain: "learn-react-2bd94.firebaseapp.com",

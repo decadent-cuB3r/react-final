@@ -14,7 +14,7 @@ function Compare() {
           <Appheader />
         </Header>
         <Content>
-            <CompareDetail products={products} />
+            <CompareDetail />
         </Content>
         <Footer className="layout-footer">
           <AppFooter />
