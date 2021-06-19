@@ -1,10 +1,15 @@
-import products from "../json/products.json";
+// json files for old system (getJSON function
 import tables from "../json/tables.json"
 import mahjong from "../json/mahjong.json";
 import tableAccessory from "../json/tableAccessory.json";
 import other from "../json/other.json";
+
+// New system with Product Category Feature
 import firebase from "firebase";
+import "firebase/firestore"
+import "firebase/auth"
 import jsonInfo from "../json/jsonInfo.json"
+import products from "../json/products.json";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -63,6 +68,36 @@ export const getProducts = async (url) => {
   return jsonProducts;
 }
 
+// authentication data reference
+const auth = firebase.auth();
+
+// get firebase authenticaiton information
+export const signInWithEmailPassword = async (email, password) => {
+  return await auth.signInWithEmailAndPassword(email, password);
+}
+
+export const registerWithEmailPassword = async (email, password, displayName) => {
+  await auth.createUserWithEmailAndPassword(email, password);
+  const user = auth.currentUser;
+  await user.updateProfile({ displayName })
+  return user;
+}
+
+export const updateUserInfoApi = async (email, password, displayName) => {
+  const user = auth.currentUser;
+  if(displayName)
+    await user.updateProfile({ displayName });
+  if(email)
+    await user.updateEmail(String(email));
+  if(password)
+    await user.updatePassword(password);
+  return user;
+}
+
+export const signOut = () => {
+  auth.signOut();
+}
+// feed json into firbase
 export const feedProducts = () => {
   products.forEach((product) => {
     const docRef = allProductsCollectionRef.doc();

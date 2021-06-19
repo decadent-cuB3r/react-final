@@ -8,6 +8,7 @@ import fb from "../images/fb.png";
 import line from "../images/line.png";
 import Drawer from "./drawer";
 import NavItem from "./NavItem";
+import UserInfo from "./HeaderUserInfo";
 
 
 export default function Header() {
@@ -97,6 +98,7 @@ export default function Header() {
               <img className="icon-img" src={cart} alt="icon" />
             </Badge>
           </Link>
+          <UserInfo />
           <Drawer />
         </div>
       </header>
