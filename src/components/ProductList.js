@@ -43,9 +43,10 @@ export default function ProductList({ products }) {
           </NavItem>
         </div>
       </div>
+      <div className="product-outside-block">
       <Row  className="product-block" gutter={[32, 32]}>
         {products.map((product) => (
-          <Col
+          <Col className="product-block-middle"
             key={product.id}
             sm={{ span: 12 }}
             lg={{ span: 8 }}
@@ -56,6 +57,7 @@ export default function ProductList({ products }) {
           </Col>
         ))}
       </Row>
+      </div>
       
     </div>
   );
