@@ -843,6 +843,86 @@ span.ham-menu-bar3--touch {
 }
 
 
+/* CARD */
+
+card {
+    width: 30%;
+    height: fit-content;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.content-user {
+    background-color: #fdefc7;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.cardLine {
+    border: solid 2px #ffb524;
+    width: 70%;
+}
+
+
+/* login css */
+
+.login-card-head {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.login-form {
+    margin: auto;
+    width: 60%;
+}
+
+.login-form__button {
+    font-size: 18px;
+    font-weight: bolder;
+    width: 177px;
+    height: 49px;
+    background: #ffb524;
+    border-radius: 30px;
+    border: none;
+    max-width: 100%;
+}
+
+.login-form__button:hover {
+    background: #FFD976;
+}
+
+.form-btn-position {
+    margin-left: 20%;
+    width: 100%;
+}
+
+.login-text {
+    margin-top: 2%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-text-color {
+    color: red;
+}
+
+.ant-form {
+    margin-top: 5%;
+}
+
+
 /*footer*/
 
 .footer {
@@ -926,6 +1006,12 @@ span.ham-menu-bar3--touch {
     .suggest-position {
         max-width: 100%;
     }
+    .form-btn-position {
+        width: 100%;
+    }
+    card {
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 1400px) {
@@ -1006,6 +1092,9 @@ span.ham-menu-bar3--touch {
     .ham-menu {
         display: block;
     }
+    card {
+        width: 50%;
+    }
 }
 
 
@@ -1064,6 +1153,9 @@ span.ham-menu-bar3--touch {
     .productlist-NavBar {
         width: 60%;
     }
+    card {
+        width: 60%;
+    }
 }
 
 
@@ -1104,6 +1196,9 @@ span.ham-menu-bar3--touch {
     .logo-img {
         width: 100px;
         height: 60px;
+    }
+    card {
+        width: 80%;
     }
 }
 
@@ -1147,6 +1242,13 @@ span.ham-menu-bar3--touch {
     .header-icon {
         width: 25%;
         margin-left: 0%;
+    }
+    card {
+        width: 90%;
+    }
+    .form-btn-position {
+        margin-left: 10%;
+        width: 100%;
     }
 }
 
@@ -1281,53 +1383,4 @@ main {
     .shoppingbag-summary-text {
         display: none;
     }
-}
-
-
-/* CARD */
-
-card {
-    width: 60%;
-    height: fit-content;
-    background: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    margin-top: 30px;
-    padding: 30px;
-}
-
-.content-user {
-    background-color: #fdefc7;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-.cardLine {
-    border: solid 3px #ffb524;
-    width: 80%;
-}
-
-
-/* login css */
-
-.login-card-head {
-    width: 100%;
-    text-align: center;
-}
-
-.login-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.login-form {
-    margin: auto;
-    width: 60%;
-}
-
-.login-form__button {
-    background: #ffb524;
-    border-radius: 30px;
 }
