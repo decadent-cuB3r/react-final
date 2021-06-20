@@ -518,7 +518,7 @@ body {
 
 .location-layout {
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
     height: 690px;
     background-color: #fff;
     display: flex;
@@ -530,6 +530,7 @@ body {
     border-style: solid;
     border-width: 345px 100px 345px 0;
     border-color: transparent #FFB800 transparent transparent;
+    max-width: 100%;
 }
 
 .location-layout-triangle {
@@ -538,6 +539,7 @@ body {
     border-style: solid;
     border-width: 345px 0 345px 100px;
     border-color: transparent transparent transparent #FFB800;
+    max-width: 100%;
 }
 
 .location-position {
@@ -547,6 +549,10 @@ body {
     margin: auto;
     padding-top: 1.5%;
     justify-content: space-between;
+    max-width: 100%;
+}
+
+.location-layout2 {
     max-width: 100%;
 }
 
@@ -783,6 +789,7 @@ body {
     }
     .location-layout {
         height: auto;
+        min-width: 100%;
     }
     .location-intro-title {
         width: auto;
@@ -800,6 +807,25 @@ body {
         width: auto;
         justify-content: center;
         padding-top: 0%;
+    }
+    #right {
+        border-width: 450px 100px 450px 0;
+    }
+    .location-layout-triangle {
+        border-width: 450px 0 450px 100px;
+    }
+    .suggest-position {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .location-layout-triangle {
+        display: none;
+    }
+    .location-layout2 {
+        margin: auto;
+        margin-bottom: 2%;
     }
 }
 
@@ -942,6 +968,17 @@ body {
     .icon-img {
         width: 35px;
         height: 35px;
+    }
+    .suggest-product-img {
+        width: 90%;
+        height: 60%;
+        margin-top: 2%;
+    }
+    .text {
+        font-size: 16px;
+    }
+    .location-intro-title {
+        font-size: 20px;
     }
 }
 

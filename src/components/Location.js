@@ -6,7 +6,7 @@ export default function Map() {
   return (
     <div className="location-layout">
       <div className="location-layout-triangle"></div>
-      <div>
+      <div className="location-layout2">
         <div className="suggest-position">
           <div id="suggest-title" className="location-intro-title">
             <div className="title-color">推薦</div>周邊商品
