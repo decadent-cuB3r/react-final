@@ -42,7 +42,7 @@ body {
 
 .header-wrap {
     display: flex;
-    width: 70%;
+    width: 7 0%;
     margin: auto;
     max-width: 100%;
     height: 100%;
@@ -113,13 +113,17 @@ body {
     background-color: #ffdb7e;
 }
 
+
 /* User Info */
-.UserInfo-box{
-    width: 100px;
+
+.UserInfo-box {
+    width: 50px;
 }
-.UserInfo-text{
+
+.UserInfo-text {
     font-size: 12px;
 }
+
 
 /* carousel */
 
@@ -760,7 +764,7 @@ body {
 
 @media screen and (max-width: 1600px) {
     .container {
-        width: 1500px;
+        width: 1600px;
     }
     .about-img {
         max-width: 100%;
@@ -778,7 +782,7 @@ body {
         margin-top: 8%;
     }
     .slick {
-        width: 100%;
+        max-width: 100%;
     }
     .location-intro {
         width: 80%;
@@ -831,7 +835,7 @@ body {
 
 @media screen and (max-width: 1200px) {
     .container {
-        width: 1140px;
+        width: 1200px;
     }
     .about-img {
         margin: auto;
@@ -889,7 +893,7 @@ body {
 
 @media screen and (max-width: 992px) {
     .container {
-        width: 960px;
+        width: 992px;
     }
     .about-content {
         width: 100%;
@@ -947,7 +951,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .container {
-        width: 720px;
+        width: 768px;
     }
     .about-content {
         width: 100%;
@@ -984,7 +988,7 @@ body {
 
 @media screen and (max-width: 576px) {
     .container {
-        width: 540px;
+        width: 576px;
     }
     .carousel-self-size {
         transform: scale(1.25);
