@@ -31,7 +31,7 @@ export default function UserInfo(props) {
                 <div className="UserInfo-text">
                     {userInfo
                         ? `${userInfo.displayName}'s`
-                        : `請登入`
+                        : `登入`
                     }
                 </div>
             </div>

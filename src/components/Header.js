@@ -84,13 +84,13 @@ export default function Header() {
         </div>
         <div className="header-icon">
           <Link className="icon-img-link" to="/">
-            <img className="icon-img" src={line} alt="icon" />
+            <img id="line" className="icon-img" src={line} alt="icon" />
           </Link>
           <Link className="icon-img-link" to="/">
-            <img className="icon-img" src={fb} alt="icon" />
+            <img id="fb" className="icon-img" src={fb} alt="icon" />
           </Link>
           <Link className="icon-img-link" to="/shoppingbag">
-            <Badge
+            <Badge id="cart"
               count={count}
               size={"default"}
               style={{ color: "white", backgroundColor: "red" }}

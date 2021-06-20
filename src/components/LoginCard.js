@@ -1,27 +1,32 @@
 import React, { useContext, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Form, Input, Button, Checkbox } from 'antd';
-import { WarningOutlined, MailOutlined, LockOutlined } from '@ant-design/icons';
-import { loginToFirebase, rememberLoginUser } from '../actions'
-import { StoreContext } from "../context"
+import { Form, Input, Button, Checkbox } from "antd";
+import { WarningOutlined, MailOutlined, LockOutlined } from "@ant-design/icons";
+import { loginToFirebase, rememberLoginUser } from "../actions";
+import { StoreContext } from "../context";
 
 const LoginCard = ({ redirect }) => {
-  const { state: { userSignin: { userInfo, loading, error, remember } }, dispatch } = useContext(StoreContext);
+  const {
+    state: {
+      userSignin: { userInfo, loading, error, remember },
+    },
+    dispatch,
+  } = useContext(StoreContext);
   const [form] = Form.useForm();
   const history = useHistory();
 
   const onFinish = async (values) => {
-    console.log('Received values of form: ', values);
+    console.log("Received values of form: ", values);
     await loginToFirebase(dispatch, values);
   };
 
-  const onChange = e => {
+  const onChange = (e) => {
     rememberLoginUser(dispatch, e.target.checked);
-  }
+  };
 
   useEffect(() => {
     if (userInfo) history.push(redirect);
-  }, [userInfo]);// eslint-disable-line react-hooks/exhaustive-deps
+  }, [userInfo]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <card>
@@ -72,11 +77,10 @@ const LoginCard = ({ redirect }) => {
           />
         </Form.Item>
         <Form.Item>
-          <Form.Item
-            name="remember"
-            noStyle
-          >
-            <Checkbox onChange={onChange} checked={remember}>Remember me</Checkbox>
+          <Form.Item name="remember" noStyle>
+            <Checkbox onChange={onChange} checked={remember}>
+              Remember me
+            </Checkbox>
           </Form.Item>
 
           <Link className="login-form__forgot" to={"/"}>
@@ -84,7 +88,7 @@ const LoginCard = ({ redirect }) => {
           </Link>
         </Form.Item>
 
-        <Form.Item>
+        <Form.Item className="form-btn-position">
           {loading ? (
             <Button
               type="primary"
@@ -92,7 +96,7 @@ const LoginCard = ({ redirect }) => {
               className="login-form__button"
               loading
             >
-              Log in
+              LOGIN
             </Button>
           ) : (
             <Button
@@ -100,11 +104,14 @@ const LoginCard = ({ redirect }) => {
               htmlType="submit"
               className="login-form__button"
             >
-              登入
+              LOGIN
             </Button>
           )}
-          <br/>
-          還沒註冊會員？ <Link to={"/register?redirect=shipping"}>立即註冊！</Link>
+          <br />
+          <div className="login-text">
+            還沒註冊會員？{" "}
+            <Link to={"/register?redirect=shipping"}><span className="login-text-color">立即註冊吧！</span></Link>
+          </div>
           {error === "" ? (
             <></>
           ) : (
