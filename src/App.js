@@ -12,6 +12,7 @@ import Feeder from "./pages/Feeder";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
+import ChangePassword from "./pages/ChangePassword";
 
 // Use Global Context provider
 import { StoreProvider } from "./context/index";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Profile} />
+          <Route path="/user/reset" component={ChangePassword} />
           <Route path="/admin/feeder" component={Feeder} />
         </Switch>
       </BrowserRouter>

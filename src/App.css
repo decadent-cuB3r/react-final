@@ -571,7 +571,7 @@ span.ham-menu-bar3--touch {
 }
 
 .middle {
-    transition: .5s ease;
+    transition: 0.5s ease;
     opacity: 0;
     position: absolute;
     top: 50%;
@@ -638,7 +638,7 @@ span.ham-menu-bar3--touch {
     height: 0;
     border-style: solid;
     border-width: 345px 100px 345px 0;
-    border-color: transparent #FFB800 transparent transparent;
+    border-color: transparent #ffb800 transparent transparent;
     max-width: 100%;
 }
 
@@ -647,7 +647,7 @@ span.ham-menu-bar3--touch {
     height: 0;
     border-style: solid;
     border-width: 345px 0 345px 100px;
-    border-color: transparent transparent transparent #FFB800;
+    border-color: transparent transparent transparent #ffb800;
     max-width: 100%;
 }
 
@@ -816,7 +816,7 @@ span.ham-menu-bar3--touch {
 }
 
 .productItem-name {
-    color: #5E7D5F;
+    color: #5e7d5f;
     font-size: 24px;
     font-weight: bolder;
     margin-top: 2%;
@@ -827,14 +827,14 @@ span.ham-menu-bar3--touch {
 }
 
 .btn-color:hover {
-    color: #5E7D5F;
-    border: #5E7D5F 3px;
+    color: #5e7d5f;
+    border: #5e7d5f 3px;
     transition: 0.1s;
 }
 
 .btn-color:hover {
-    color: #5E7D5F;
-    border: #5E7D5F 1px solid;
+    color: #5e7d5f;
+    border: #5e7d5f 1px solid;
     transition: 0.1s;
 }
 
@@ -1281,4 +1281,53 @@ main {
     .shoppingbag-summary-text {
         display: none;
     }
+}
+
+
+/* CARD */
+
+card {
+    width: 60%;
+    height: fit-content;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.content-user {
+    background-color: #fdefc7;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.cardLine {
+    border: solid 3px #ffb524;
+    width: 80%;
+}
+
+
+/* login css */
+
+.login-card-head {
+    width: 100%;
+    text-align: center;
+}
+
+.login-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.login-form {
+    margin: auto;
+    width: 60%;
+}
+
+.login-form__button {
+    background: #ffb524;
+    border-radius: 30px;
 }
