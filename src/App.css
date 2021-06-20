@@ -115,7 +115,7 @@ body {
 
 /* User Info */
 .UserInfo-box{
-    width: max-content;
+    width: 100px;
 }
 .UserInfo-text{
     font-size: 12px;
