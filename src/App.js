@@ -1,5 +1,8 @@
+// import dependencies
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
+
+// import component pages
 import HomePage from "./pages/Home";
 import ProductPage from "./pages/Product";
 import DetailPage from "./pages/Details";
@@ -10,6 +13,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 
+// Use Global Context provider
 import { StoreProvider } from "./context/index";
 
 function App() {

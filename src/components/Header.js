@@ -8,7 +8,7 @@ import fb from "../images/fb.png";
 import line from "../images/line.png";
 import Drawer from "./drawer";
 import NavItem from "./NavItem";
-import UserInfo from "./HeaderUserInfo";
+import UserInfo from "./UserInfo";
 
 
 export default function Header() {
@@ -25,7 +25,7 @@ export default function Header() {
     <Menu>
       <Menu.ItemGroup title="商品分類">
         <Menu.Item>
-          <NavItem to="product/tables">電動麻將桌</NavItem>
+          <NavItem to="/product/tables">電動麻將桌</NavItem>
         </Menu.Item>
         <Menu.Item>
           <NavItem to="/product/tableAccessory">電動麻將桌配件</NavItem>
@@ -46,7 +46,7 @@ export default function Header() {
   );
 
   return (
-    <div className="header">
+    <>
       <header className="header-wrap">
         <div className="header-logo">
           <Link to="/">
@@ -102,6 +102,6 @@ export default function Header() {
           <Drawer />
         </div>
       </header>
-    </div>
+    </>
   );
 }
