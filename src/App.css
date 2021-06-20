@@ -20,10 +20,12 @@ body {
 }
 
 .layout-header {
+    display: flex;
     padding: 0;
     height: 126px;
     line-height: 1.6;
     background-color: #fff;
+    align-items: center;
 }
 
 .layout-footer {
@@ -49,6 +51,10 @@ body {
     align-items: center;
 }
 
+.header-logo{
+    width: 15%;
+}
+
 .logo-img {
     width: 145px;
     height: 98px;
@@ -64,13 +70,14 @@ body {
 }
 
 .header-nav {
-    width: 700px;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .header-icon {
+    width: 25%;
     display: flex;
     justify-content: space-evenly;
 }
