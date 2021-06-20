@@ -44,14 +44,14 @@ body {
 
 .header-wrap {
     display: flex;
-    width: 7 0%;
+    width: 70%;
     margin: auto;
     max-width: 100%;
     height: 100%;
     align-items: center;
 }
 
-.header-logo{
+.header-logo {
     width: 15%;
 }
 
@@ -96,28 +96,126 @@ body {
 }
 
 .header-ham-text {
-    width: 140%;
+    margin-top: 2%;
+    width: 80%;
     font-size: 18px;
     color: #000;
     display: block;
-    line-height: 150%;
+    line-height: 200%;
+    font-weight: bolder;
 }
 
 .header-ham-text:hover {
-    color: #fff;
-    background-color: #ffb800;
+    color: #ffb800;
     transition: 0.2s;
 }
 
-.ham-btn {
-    background-color: #ffb800;
-    border: #fff;
-    margin: auto;
+
+/* hammenu */
+
+.ham-menu {
+    display: inline-block;
+    position: relative;
+    margin-left: -4rem;
+    z-index: 999;
+    background-color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 0.7;
+    left: 3rem;
+    top: 1rem;
+    transition: all .25s linear;
     display: none;
 }
 
-.ham-btn:hover {
-    background-color: #ffdb7e;
+.ham-menu:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+span.ham-menu-bar1 {
+    display: inline-block;
+    position: absolute;
+    background-color: #ffb800;
+    width: 24px;
+    height: 3px;
+    top: 0rem;
+    transition: all .05s linear;
+    transform: rotate(-4deg);
+}
+
+span.ham-menu-bar2 {
+    display: inline-block;
+    background-color: #ffb800;
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    top: 0.55rem;
+    transition: all .25s linear;
+    transform: rotate(2deg);
+}
+
+span.ham-menu-bar3 {
+    display: inline-block;
+    background-color: #ffb800;
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    top: 1.1rem;
+    transition: all .25s linear;
+    transform: rotate(-2deg);
+}
+
+span.ham-menu-bar1--touch {
+    display: inline-block;
+    position: absolute;
+    background-color: #ffb800;
+    width: 30px;
+    height: 3px;
+    top: 16px;
+    opacity: 0;
+    transition: all .05s linear;
+}
+
+span.ham-menu-bar2--touch {
+    display: inline-block;
+    background-color: #ffb800;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    opacity: 1;
+    top: 0.6rem;
+    transition: all .25s linear;
+    transform: rotate(45deg);
+}
+
+span.ham-menu-bar3--touch {
+    display: inline-block;
+    background-color: #ffb800;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top: 0.6rem;
+    opacity: 1;
+    transition: all .25s linear;
+    transform: rotate(-45deg);
+}
+
+.ant-drawer-header {
+    border-bottom: none;
+}
+
+.ant-drawer-title {
+    text-align: center;
+}
+
+#ham-line {
+    margin-top: 5%;
+    margin-right: -5%;
+}
+
+#ham-fb {
+    margin-top: 5%;
 }
 
 
@@ -125,10 +223,13 @@ body {
 
 .UserInfo-box {
     width: 50px;
+    cursor: pointer;
 }
 
 .UserInfo-text {
-    font-size: 12px;
+    font-size: 14px;
+    color: #ffb800;
+    font-weight: bolder;
 }
 
 
@@ -878,20 +979,32 @@ body {
     .header-nav {
         margin-right: 2%;
     }
-    .header-nav-text {
+    .header-nav-text,
+    #fb,
+    #line {
         display: none;
     }
-    .header-wrap {
-        width: 80%;
+    .header-icon {
+        margin-left: 12%;
     }
     .header-nav {
         width: 350px;
     }
-    .ham-btn {
-        display: block;
-    }
     .productlist-NavBarItem {
         font-size: 18px;
+    }
+    .UserInfo-box {
+        padding-right: 7%;
+    }
+    #cart {
+        margin-top: 30%;
+    }
+    .ham-container {
+        padding-top: 5%;
+        display: block;
+    }
+    .ham-menu {
+        display: block;
     }
 }
 
@@ -987,6 +1100,10 @@ body {
     }
     .location-intro-title {
         font-size: 20px;
+    }
+    .logo-img {
+        width: 100px;
+        height: 60px;
     }
 }
 
