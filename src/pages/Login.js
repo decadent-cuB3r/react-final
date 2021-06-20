@@ -18,10 +18,10 @@ function Login(props) {
                 <Header className="layout-header">
                     <Appheader />
                 </Header>
-                <Content>
+                <Content className="content-user">
                     <LoginCard redirect={redirect} />
                 </Content>
-                <Footer className="layout-footer">
+                <Footer className="layout-footer login-footer">
                     <AppFooter />
                 </Footer>
             </Layout>
