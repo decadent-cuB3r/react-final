@@ -4,6 +4,8 @@ import { Select, Descriptions, Empty } from "antd";
 import AddToCartComplex from "./AddToCartComplex";
 import Previous from "./previousPage";
 import TableDetailImg from "./TableDetailImg";
+import CommentSection from "./CommentSection";
+import CommentList from "./CommentList";
 import { Divider } from "antd";
 
 const DemoBox = (props) => (
@@ -86,6 +88,8 @@ function ProductDetail({ product }) {
           )}
         </Col>
       </Row>
+      <CommentList />
+      <CommentSection />
     </div>
   );
 }

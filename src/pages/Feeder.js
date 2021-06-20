@@ -17,7 +17,7 @@ function Compare() {
         <Header className="layout-header">
           <Appheader />
         </Header>
-        <Content>
+        <Content className="content-user">
             <Feeder />
         </Content>
         <Footer className="layout-footer">

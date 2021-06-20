@@ -11,6 +11,7 @@ import "firebase/auth"
 import jsonInfo from "../json/jsonInfo.json"
 import products from "../json/products.json";
 
+// INITIALIZE FIREBASE
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyA32dvcFypCXIFhuD49i0xBjvb5R5Su4oc",
@@ -40,9 +41,9 @@ export const getJSON = (url) => {
 };
 
 // Database Route Reference
-const wujiCollectionRef = firebase.firestore().collection("WuJiMahjong");
-const jsonDocRef = wujiCollectionRef.doc("json");
-const allProductsCollectionRef = jsonDocRef.collection("allProducts");
+// const wujiCollectionRef = firebase.firestore().collection("wuJiMahjong");
+// const jsonDocRef = wujiCollectionRef.doc("json");
+const allProductsCollectionRef = firebase.firestore().collection("wuJiMahjong").doc("json").collection("allProducts")
 
 export const getProductById = async (productId) => {
   // REFERENCE PRODUCTS COLLECTION
@@ -97,7 +98,39 @@ export const updateUserInfoApi = async (email, password, displayName) => {
 export const signOut = () => {
   auth.signOut();
 }
-// feed json into firbase
+
+// Comment Firebase location reference
+const allPostsCollectionRef = firebase.firestore().collection("Comments");
+
+export const createComment = async (content) => {
+  const user = auth.currentUser.displayName;
+  const email = auth.currentUser.email;
+  const time = firebase.firestore.FieldValue.serverTimestamp();
+  const PostsRef = await allPostsCollectionRef.doc();
+  const id = PostsRef.id;
+  const applications = 0;
+  // Store Data for Aggregation Queries
+  await PostsRef.set({
+    ...content,
+    id,
+    time,
+    user,
+    applications,
+    email
+  });
+  return { ...content, id };
+}
+
+export const getComments = async () => {
+  let posts = [];
+  let querySnapshot = await allPostsCollectionRef.get();
+  querySnapshot.forEach((doc) => {
+    posts.push(doc.data());
+  });
+  return posts;
+}
+
+// feed json into firebase
 export const feedProducts = () => {
   products.forEach((product) => {
     const docRef = allProductsCollectionRef.doc();
