@@ -15,7 +15,6 @@ body {
     line-height: 1.6;
     background-color: #fff;
     padding: 0;
-    width: 100vw;
     margin: 0;
 }
 
@@ -391,25 +390,24 @@ span.ham-menu-bar3--touch {
 
 .productlist-NavBarItem {
     color: #828282;
-    width: 120%;
-    height: 100%;
+    width: 110%;
     text-align: center;
-    line-height: 69px;
+    line-height: 40px;
     font-size: 22px;
 }
 
 .productlist-NavBarItem:hover {
     transition: 0.3s;
     color: #fff;
-    width: 120%;
+    width: 110%;
     background-color: #8bb98d;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .productlist-NavBarItem--active {
     background-color: #8bb98d;
     color: #fff;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .product-outside-block {
@@ -1107,7 +1105,8 @@ main {
 .summary-block {
     border: solid 2px #000;
     margin-bottom: 5%;
-    height: 50%;
+    height: fit-content;
+    padding-bottom: 8%;
 }
 
 .summary-position {
@@ -1394,6 +1393,10 @@ main {
     card {
         width: 60%;
     }
+    .productlist-NavBar {
+        margin-bottom: 3%;
+        width: 80%;
+    }
 }
 
 
@@ -1479,7 +1482,7 @@ main {
         margin-bottom: 20%;
     }
     .productlist-NavBar {
-        width: 85%;
+        width: 90%;
     }
     .productlist-NavBarItem {
         font-size: 16px;
