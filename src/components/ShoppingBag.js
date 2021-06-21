@@ -148,9 +148,9 @@ export default function ShoppingDetail() {
             </div>
           </div>
         </div>
-        <div className="container shopping-btn-container shoppingbag-checkout-btn">
+        <div className="container shopping-btn-container ">
           <Button
-            className="shoppingbag-btn-style-2"
+            className="shoppingbag-btn-style-2 "
             onClick={checkoutHandler}
           >
             <span style={{ fontSize: 18, fontWeight: "bolder" }}>

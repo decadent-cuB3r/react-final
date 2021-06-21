@@ -19,7 +19,7 @@ export default function ShippingCard() {
 
     return (
         <div className="shoppingbag">
-            <div className="shoppinglist-position">
+            <div className="shipping-position">
                 <Link to="/shoppingbag" className="shoppingbag-btn-style-1">
                     <img className="previous-img" src="/images/上一頁.png" alt="No-Warning"/>
                     上一步
@@ -45,12 +45,12 @@ export default function ShippingCard() {
                         description=""
                     />
                 </Steps>
-                <div className="shoppingbag-text bg-yellow">購物車</div>
+                <div className="shoppingbag-text bg-yellow">填寫資料</div>
                 <div className="cart-outline">
                     <Form
                         onFinish={handleSubmit}
                         name="normal_login"
-                        className="shipping-form"
+                        className="login-form"
                         initialValues={shippingAddress}
                         form={form}
                     >
@@ -128,7 +128,7 @@ export default function ShippingCard() {
                             <Input placeholder="Enter country" />
                         </Form.Item>
 
-                        <Form.Item>
+                        <Form.Item className="ship-btn-pos">
                             <Button
                                 type="primary"
                                 htmlType="submit"
