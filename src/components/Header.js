@@ -12,9 +12,7 @@ import UserInfo from "./UserInfo";
 
 
 export default function Header() {
-  const {
-    state: { cartItems },
-  } = useContext(StoreContext);
+  const { state: { cart: { cartItems } } } = useContext(StoreContext);
 
   const count =
     cartItems.length > 0

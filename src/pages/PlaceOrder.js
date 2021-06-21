@@ -1,11 +1,11 @@
 import { Layout, BackTop } from "antd";
 import Appheader from "../components/Header";
 import AppFooter from "../components/Footer";
-import PaymentCard from "../components/PaymentCard";
+import PlaceOrderCard from "../components/PlaceOrderCard";
 
 const { Header, Content, Footer } = Layout;
 
-function ContactUs() {
+function PlaceOrder() {
   return (
     <Layout className="container">
       <Layout>
@@ -13,7 +13,7 @@ function ContactUs() {
           <Appheader />
         </Header>
         <Content>
-          <PaymentCard />
+          <PlaceOrderCard />
         </Content>
         <Footer className="layout-footer">
           <AppFooter />
@@ -24,4 +24,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default PlaceOrder;

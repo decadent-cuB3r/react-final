@@ -44,6 +44,7 @@ export const getJSON = (url) => {
 // const wujiCollectionRef = firebase.firestore().collection("wuJiMahjong");
 // const jsonDocRef = wujiCollectionRef.doc("json");
 const allProductsCollectionRef = firebase.firestore().collection("wuJiMahjong").doc("json").collection("allProducts")
+const allOrdersCollectionRef = firebase.firestore().collection("wuJiMahjong").doc("Orders").collection("allOrders")
 
 export const getProductById = async (productId) => {
   // REFERENCE PRODUCTS COLLECTION
@@ -99,8 +100,20 @@ export const signOut = () => {
   auth.signOut();
 }
 
+// order to firebase API
+export const addOrderApi = async (order) => {
+  const orderRef = await allOrdersCollectionRef.doc();
+  const id = orderRef.id;
+  // Store Data for Aggregation Queries
+  await orderRef.set({
+    ...order,
+    id
+  });
+  return { ...order, id };
+}
+
 // Comment Firebase location reference
-const allPostsCollectionRef = firebase.firestore().collection("Comments");
+const allPostsCollectionRef = firebase.firestore().collection("wuJiMahjong").doc("QandA").collection("product1");
 
 export const createComment = async (content) => {
   const user = auth.currentUser.displayName;
@@ -108,14 +121,12 @@ export const createComment = async (content) => {
   const time = firebase.firestore.FieldValue.serverTimestamp();
   const PostsRef = await allPostsCollectionRef.doc();
   const id = PostsRef.id;
-  const applications = 0;
   // Store Data for Aggregation Queries
-  await PostsRef.set({
+  await PostsRef.add({
     ...content,
     id,
     time,
     user,
-    applications,
     email
   });
   return { ...content, id };

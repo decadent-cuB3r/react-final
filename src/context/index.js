@@ -26,6 +26,8 @@ import {
   SUCCESS_COMMENT_REQUEST,
   FAIL_COMMENT_REQUEST,
   SET_COMMENTS_LIST,
+  SAVE_SHIPPING_ADDRESS,
+  SAVE_PAYMENT_METHOD,
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -45,7 +47,13 @@ const initialState = {
   navBar: {
     activeItem: "/",
   },
-  cartItems,
+  cart: {
+    cartItems,
+    shippingAddress: localStorage.getItem('shippingAddress')
+      ? JSON.parse(localStorage.getItem('shippingAddress'))
+      : {},
+    paymentMethod: 'Google',
+  },
   userSignin: {
     loading: false,
     userInfo: localStorage.getItem("userInfo")
@@ -59,6 +67,7 @@ const initialState = {
     userInfo: null,
     error: "",
   },
+
 };
 
 function reducer(state, action) {
@@ -81,19 +90,29 @@ function reducer(state, action) {
       };
     case CART_ITEM_ADD:
       const item = action.payload;
-      const product = state.cartItems.find((x) => x.id === item.id);
+      const product = state.cart.cartItems.find((x) => x.id === item.id);
       if (product) {
-        cartItems = state.cartItems.map((x) =>
+        cartItems = state.cart.cartItems.map((x) =>
           x.id === product.id ? item : x
         );
-        return { ...state, cartItems };
+        return { ...state, cart: { ...state.cart, cartItems } };
       }
-      cartItems = [...state.cartItems, item];
-      return { ...state, cartItems };
+      cartItems = [...state.cart.cartItems, item];
+      return { ...state, cart: { ...state.cart, cartItems } };
     case CART_ITEM_REMOVE:
-      cartItems = state.cartItems.filter((x) => x.id !== action.payload);
-      return { ...state, cartItems };
-
+      cartItems = state.cart.cartItems.filter((x) => x.id !== action.payload);
+      return { ...state, cart: { ...state.cart, cartItems } };
+    case SAVE_SHIPPING_ADDRESS:
+      console.log('action.payload.shippingAddress = ')
+      console.log(action.payload)
+      return {
+        ...state, cart: { ...state.cart, shippingAddress: action.payload }
+      };
+    case SAVE_PAYMENT_METHOD:
+      return {
+        ...state,
+        cart: { ...state.cart, paymentMethod: action.payload }
+      };
     case BEGIN_LOGIN_REQUEST:
       return { ...state, userSignin: { ...state.userSignin, loading: true } };
     case SUCCESS_LOGIN_REQUEST:
@@ -186,8 +205,8 @@ function reducer(state, action) {
     case BEGIN_COMMENT_REQUEST:
       return {
         ...state,
-        postInfo: {
-          ...state.postInfo,
+        commentInfo: {
+          ...state.commentInfo,
           loading: true,
           success: false,
         }
@@ -195,8 +214,8 @@ function reducer(state, action) {
     case SUCCESS_COMMENT_REQUEST:
       return {
         ...state,
-        postInfo: {
-          ...state.postInfo,
+        commentInfo: {
+          ...state.commentInfo,
           loading: false,
           success: true,
           error: null,
@@ -205,8 +224,8 @@ function reducer(state, action) {
     case FAIL_COMMENT_REQUEST:
       return {
         ...state,
-        postInfo: {
-          ...state.postInfo,
+        commentInfo: {
+          ...state.commentInfo,
           loading: false,
           success: false,
           error: action.payload,
