@@ -15,7 +15,7 @@ function Shipping() {
         <Content>
           <ShippingCard />
         </Content>
-        <Footer className="layout-footer">
+        <Footer className="layout-footer ">
           <AppFooter />
         </Footer>
       </Layout>

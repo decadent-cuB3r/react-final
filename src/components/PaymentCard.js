@@ -47,7 +47,7 @@ export default function PaymentMethodCard() {
                         description=""
                     />
                 </Steps>
-                <div className="shoppingbag-text bg-yellow">購物車</div>
+                <div className="shoppingbag-text bg-yellow">付款方式</div>
                 <div className="cart-outline">
                     <Form
                         onFinish={handleSubmit}
@@ -65,7 +65,7 @@ export default function PaymentMethodCard() {
                             </Radio.Group>
                         </Form.Item>
 
-                        <Form.Item>
+                        <Form.Item  className="pay-btn-pos">
                             <Button
                                 type="primary"
                                 htmlType="submit"
