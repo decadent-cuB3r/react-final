@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useHistory, Link } from "react-router-dom";
-import { Form, Radio, Button, Steps, Row, Col } from "antd";
+import { Button, Steps, Row, Col } from "antd";
 import { addOrdertoFirebase } from "../actions"
 import { StoreContext } from "../context";
 const { Step } = Steps;
@@ -34,7 +34,7 @@ export default function PaymentMethodCard() {
         <div className="shoppingbag">
             <div className="shoppinglist-position">
                 <Link to="/product" className="shoppingbag-btn-style-1">
-                    <img className="previous-img" src="/images/上一頁.png" />
+                    <img className="previous-img" src="/images/上一頁.png" alt="No-Warning"/>
                     繼續購物
                 </Link>
                 <Steps className="shoppingbag-steps" current={3}>

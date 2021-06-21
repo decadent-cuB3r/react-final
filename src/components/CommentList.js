@@ -4,17 +4,17 @@ import { setCommentList } from "../actions"
 import CommentItem from "./CommentItem";
 
 export default function CommentList() {
-  const { state : { page : { posts } } , dispatch } = useContext(StoreContext);
+  const { state: { commentPage: { posts } }, dispatch } = useContext(StoreContext);
   useEffect(() => {
     setCommentList(dispatch);
   }, [posts]);
-  
-  return(
+
+  return (
     <div className="postList">
       <div className="postList-lineY"></div>
       <p>Sort by：Newest ▼</p>
-      {posts.map( post => (
-        <CommentItem post = {post}/>
+      {posts.map(post => (
+        <CommentItem post={post} />
       ))}
     </div>
   );
