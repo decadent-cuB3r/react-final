@@ -3,15 +3,15 @@ import { StoreContext } from "../context"
 import { useContext, useEffect } from "react"
 import { cartItemAdd } from "../actions"
 
-export default function AddToCart({product, qty}) {
-  const { state: { cartItems }, dispatch } = useContext(StoreContext);
+export default function AddToCart({ product, qty }) {
+  const { state: { cart: { cartItems } }, dispatch } = useContext(StoreContext);
 
   const addToCart = () => {
     openNotification();
     cartItemAdd(dispatch, product, qty);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems])
 
