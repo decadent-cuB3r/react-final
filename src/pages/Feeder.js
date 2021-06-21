@@ -2,7 +2,6 @@ import { Layout, BackTop,  } from "antd";
 import Appheader from "../components/Header";
 import AppFooter from "../components/Footer";
 import Feeder from "../components/FeederCard";
-import products from "../json/products.json";
 import { useEffect } from "react";
 
 const { Header, Content, Footer } = Layout;

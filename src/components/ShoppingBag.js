@@ -1,6 +1,6 @@
 import { useEffect, useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Col, Row, Button, Select, Empty, Steps, Radio } from "antd";
+import { Button, Select, Empty, Steps, Radio } from "antd";
 import { StoreContext } from "../context";
 import { cartItemAdd, cartItemRemove } from "../actions";
 
@@ -28,7 +28,7 @@ export default function ShoppingDetail() {
 
   const history = useHistory();
   const checkoutHandler = () => {
-    if (value == 1) {
+    if (value === 1) {
       history.push("login?redirect=payment");
     } else {
       history.push("/login?redirect=shipping");
@@ -39,7 +39,7 @@ export default function ShoppingDetail() {
     <div className="shoppingbag">
       <div className="shoppinglist-position">
         <Link to="/product" className="shoppingbag-btn-style-1">
-          <img className="previous-img" src="/images/上一頁.png" />
+          <img className="previous-img" src="/images/上一頁.png" alt="No-Warning"/>
           繼續購物
         </Link>
         <Steps className="shoppingbag-steps" current={0}>

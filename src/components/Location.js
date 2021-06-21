@@ -15,7 +15,7 @@ export default function Map() {
           <div className="suggest-product">
             <NavItem to="/product/mahjong">
               <div className="suggest-product-img">
-                <img src="../images/otherproducts/duncan-mj.jpeg" />
+                <img src="../images/otherproducts/duncan-mj.jpeg" alt="No-Warning"/>
                 <div class="middle">
                   <div class="text">手打麻將</div>
                 </div>
@@ -23,7 +23,7 @@ export default function Map() {
             </NavItem>
             <NavItem to="/product/tableAccessory">
               <div className="suggest-product-img">
-                <img src="../images/otherproducts/100p.jpeg" />
+                <img src="../images/otherproducts/100p.jpeg" alt="No-Warning"/>
                 <div class="middle">
                   <div class="text">麻將配件</div>
                 </div>

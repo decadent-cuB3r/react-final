@@ -1,10 +1,10 @@
-import { useEffect, useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Col, Row, Button, Select, Empty, Steps, Radio, Form, Input } from "antd";
+import { Button, Steps, Form, Input } from "antd";
 import { StoreContext } from "../context";
-import { cartItemAdd, cartItemRemove, saveShippingAddress } from "../actions";
+import { saveShippingAddress } from "../actions";
 
-const { Option } = Select;
+
 const { Step } = Steps;
 
 export default function ShippingCard() {
@@ -21,7 +21,7 @@ export default function ShippingCard() {
         <div className="shoppingbag">
             <div className="shoppinglist-position">
                 <Link to="/shoppingbag" className="shoppingbag-btn-style-1">
-                    <img className="previous-img" src="/images/上一頁.png" />
+                    <img className="previous-img" src="/images/上一頁.png" alt="No-Warning"/>
                     上一步
                 </Link>
                 <Steps className="shoppingbag-steps" current={1}>

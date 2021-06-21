@@ -1,4 +1,3 @@
-import { Row, Col } from "antd";
 import { Link } from "react-router-dom";
 import arrow from "../images/right-arrow.png";
 import Slider from "react-slick";
@@ -56,27 +55,27 @@ export default class MultipleItems extends Component {
             <Slider {...settings}>
               <div>
               <Link to="/detail/1tE4nK">
-                  <img className="intro-img" src={desk1}></img>
+                  <img className="intro-img" src={desk1} alt="No-Warning"></img>
                 </Link>
               </div>
               <div>
                 <Link to="/detail/IuFGYl">
-                  <img className="intro-img" src={desk2}></img>
+                  <img className="intro-img" src={desk2} alt="No-Warning"></img>
                 </Link>
               </div>
               <div>
                 <Link to="/detail/VfcByl">
-                  <img className="intro-img" src={desk3}></img>
+                  <img className="intro-img" src={desk3} alt="No-Warning"></img>
                 </Link>
               </div>
               <div>
                 <Link to="/detail/1yF2Ib">
-                  <img className="intro-img" src={desk4}></img>
+                  <img className="intro-img" src={desk4} alt="No-Warning"></img>
                 </Link>
               </div>
               <div>
                 <Link to="/detail/x5m8g3">
-                  <img className="intro-img" src={desk5}></img>
+                  <img className="intro-img" src={desk5} alt="No-Warning"></img>
                 </Link>
               </div>
             </Slider>

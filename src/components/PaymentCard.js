@@ -23,7 +23,7 @@ export default function PaymentMethodCard() {
         <div className="shoppingbag">
             <div className="shoppinglist-position">
                 <Link onClick={goToPreviousPath} className="shoppingbag-btn-style-1">
-                    <img className="previous-img" src="/images/上一頁.png" />
+                    <img className="previous-img" src="/images/上一頁.png" alt="No-Warning"/>
                     上一步
                 </Link>
                 <Steps className="shoppingbag-steps" current={2}>

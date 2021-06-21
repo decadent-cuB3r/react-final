@@ -19,9 +19,9 @@ import {
   SUCCESS_UPDATE_USERINFO,
   FAIL_UPDATE_USERINFO,
   LOGOUT_REQUEST,
-  BEGIN_PRODUCTS_FEED,
-  SUCCESS_PRODUCTS_FEED,
-  FAIL_PRODUCTS_FEED,
+  // BEGIN_PRODUCTS_FEED,
+  // SUCCESS_PRODUCTS_FEED,
+  // FAIL_PRODUCTS_FEED,
   BEGIN_COMMENT_REQUEST,
   SUCCESS_COMMENT_REQUEST,
   FAIL_COMMENT_REQUEST,
@@ -67,7 +67,9 @@ const initialState = {
     userInfo: null,
     error: "",
   },
-
+  commentPage: {
+    posts: [],
+  }
 };
 
 function reducer(state, action) {
