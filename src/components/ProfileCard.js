@@ -35,7 +35,7 @@ const ProfileCard = () => {
         initialValues={userInfo}
       >
         <Form.Item
-          label="name: "
+          label="姓名： "
           name="name"
           rules={[
             {
@@ -67,8 +67,8 @@ const ProfileCard = () => {
           <Input placeholder={email} />
         </Form.Item>
         <Form.Item
-          name="password"
-          label="Password"
+          name="Password"
+          label="密碼："
           rules={[
             {
               message: "Please input your password!",
@@ -80,8 +80,8 @@ const ProfileCard = () => {
         </Form.Item>
 
         <Form.Item
-          name="rePassword"
-          label="Re-enter Password"
+          name="Re-enter Password"
+          label="密碼確認："
           dependencies={["password"]}
           hasFeedback
           rules={[
@@ -104,7 +104,7 @@ const ProfileCard = () => {
           <Input.Password />
         </Form.Item>
 
-        <Form.Item>
+        <Form.Item className="form-btn-position">
           <Button
             type="primary"
             htmlType="submit"
