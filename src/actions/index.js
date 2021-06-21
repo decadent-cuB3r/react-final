@@ -25,10 +25,15 @@ import {
   SUCCESS_COMMENT_REQUEST,
   FAIL_COMMENT_REQUEST,
   SET_COMMENTS_LIST,
+  SAVE_SHIPPING_ADDRESS,
+  SAVE_PAYMENT_METHOD,
+  BEGIN_ORDER_CREATE,
+  SUCCESS_ORDER_CREATE,
+  FAIL_ORDER_CREATE,
 } from "../utils/constants";
 
 import {
-  getProductById, 
+  getProductById,
   getProducts,
   signInWithEmailPassword,
   registerWithEmailPassword,
@@ -37,6 +42,7 @@ import {
   feedProducts,
   createComment,
   getComments,
+  addOrderApi,
 } from "../api";
 
 export const activeNavItemSet = (dispatch, activeNavItem) => {
@@ -206,21 +212,64 @@ export const feedJSONToFirebase = async (dispatch) => {
   }
 }
 
+// Shipping Address
+export const saveShippingAddress = (dispatch, shippingAddress) => {
+  dispatch({
+    type: SAVE_SHIPPING_ADDRESS,
+    payload: shippingAddress,
+  });
+  localStorage.setItem('shippingAddress', JSON.stringify(shippingAddress));
+}
+
+// Payment Method
+export const savePaymentMethod = (dispatch, paymentMethod) => {
+  dispatch({
+    type: SAVE_PAYMENT_METHOD,
+    payload: paymentMethod.paymentMethod,
+  });
+}
+
+// Place Order Action
+export const addOrdertoFirebase = async (dispatch, cart) => {
+  dispatch({ type: BEGIN_ORDER_CREATE });
+  try {
+    const item = {
+      orderItems: cart.cartItems,
+      shippingAddress: cart.shippingAddress,
+      paymentMethod: cart.paymentMethod,
+      itemsPrice: cart.itemsPrice,
+      shippingPrice: cart.shippingPrice,
+      taxPrice: cart.taxPrice,
+      totalPrice: cart.totalPrice,
+    };
+    const orderInfo = await addOrderApi(item);
+    dispatch({
+      type: SUCCESS_ORDER_CREATE,
+      payload: orderInfo
+    });
+    localStorage.setItem('orderInfo', JSON.stringify(orderInfo));
+    return orderInfo;
+  } catch (error) {
+    console.log(error);
+    dispatch({ type: FAIL_ORDER_CREATE, payload: error });
+    return null;
+  }
+}
 // Comment on Product
 export const CommentRequest = async (dispatch, content) => {
   dispatch({ type: BEGIN_COMMENT_REQUEST });
-  try {  
+  try {
     const postInfo = await createComment(content);
-    dispatch({ 
-      type: SUCCESS_COMMENT_REQUEST, 
-      payload: postInfo 
+    dispatch({
+      type: SUCCESS_COMMENT_REQUEST,
+      payload: postInfo
     });
     return postInfo;
   } catch (error) {
     console.log(error);
     dispatch({ type: FAIL_COMMENT_REQUEST, payload: error });
     return null;
-  }  
+  }
 }
 
 export const setCommentList = async (dispatch) => {

@@ -8,10 +8,7 @@ const { Option } = Select;
 const { Step } = Steps;
 
 export default function ShoppingDetail() {
-  const {
-    state: { cartItems },
-    dispatch,
-  } = useContext(StoreContext);
+  const { state: { cart: { cartItems } }, dispatch } = useContext(StoreContext);
 
   const getTotalPrice = () => {
     return cartItems.length > 0
@@ -31,7 +28,11 @@ export default function ShoppingDetail() {
 
   const history = useHistory();
   const checkoutHandler = () => {
-    history.push("/login?redirect=shipping");
+    if (value == 1) {
+      history.push("login?redirect=payment");
+    } else {
+      history.push("/login?redirect=shipping");
+    }
   }
 
   return (
@@ -46,6 +47,12 @@ export default function ShoppingDetail() {
           <Step
             className="shoppingbag-step"
             title="填寫資料"
+            subTitle=""
+            description=""
+          />
+          <Step
+            className="shoppingbag-step"
+            title="付款方式"
             subTitle=""
             description=""
           />
@@ -122,9 +129,9 @@ export default function ShoppingDetail() {
             <hr className="summaryLine" />
             <div className="summary-text">
               小計：<span className="summary-float">${getTotalPrice()}</span>
-              <br/>
+              <br />
               運費：<span className="summary-float">$0</span>
-              <br/>
+              <br />
               <span className="discount">使用優惠代碼</span>
             </div>
             <hr className="summaryLine" />
@@ -142,14 +149,15 @@ export default function ShoppingDetail() {
             </div>
           </div>
         </div>
-        <div className="container shopping-btn-container">
-          <Link className="shoppingbag-checkout-btn" to="/">
-            <Button className="shoppingbag-btn-style-2">
-              <span style={{ fontSize: 18, fontWeight: "bolder" }}>
-                前往結帳
-              </span>
-            </Button>
-          </Link>
+        <div className="container shopping-btn-container shoppingbag-checkout-btn">
+          <Button
+            className="shoppingbag-btn-style-2"
+            onClick={checkoutHandler}
+          >
+            <span style={{ fontSize: 18, fontWeight: "bolder" }}>
+              前往結帳
+            </span>
+          </Button>
         </div>
       </div>
     </div>

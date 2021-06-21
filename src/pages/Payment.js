@@ -5,7 +5,7 @@ import PaymentCard from "../components/PaymentCard";
 
 const { Header, Content, Footer } = Layout;
 
-function ContactUs() {
+function Payment() {
   return (
     <Layout className="container">
       <Layout>
@@ -24,4 +24,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default Payment;
