@@ -1052,12 +1052,6 @@ main {
     text-align: right;
 }
 
-.shoppingbag-checkout-btn {
-    text-align: center;
-    background-color: #fff;
-    width: 100%;
-}
-
 .shoppingbag-btn-style-1 {
     width: 20%;
     color: #000;
@@ -1076,6 +1070,18 @@ main {
     border-color: #ffb800;
 }
 
+.ant-steps-item-finish .ant-steps-item-icon {
+    border-color: #ffb800;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon>.ant-steps-icon {
+    color: #ffb800;
+}
+
+.ant-steps-item-tail {
+    color: #ffb800;
+}
+
 .shoppingbag-btn-style-1:hover {
     color: #000;
 }
@@ -1086,6 +1092,7 @@ main {
     height: 48px;
     color: #fff;
     background-color: #ffb800;
+    margin: auto;
 }
 
 .shoppingbag-btn-style-2:hover {
@@ -1220,6 +1227,21 @@ main {
 .compare-btn:hover {
     color: #fff;
     background-color: #ffb800;
+}
+
+
+/* payment */
+
+.payment-position {
+    width: 100%;
+}
+
+.payment-form {
+    width: 80%;
+}
+
+#normal-login {
+    margin-right: 0%;
 }
 
 
@@ -1630,6 +1652,19 @@ main {
         font-size: 16px;
         width: 60%;
         border: solid #ffb800 4px;
+    }
+    .ant-steps-item-icon {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+        margin-top: 8%;
+        line-height: 20px;
+    }
+    .ant-steps-item-title {
+        font-size: 2px;
+    }
+    .shoppingbag {
+        width: 80%;
     }
 }
 

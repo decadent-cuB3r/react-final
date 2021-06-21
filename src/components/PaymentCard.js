@@ -21,7 +21,7 @@ export default function PaymentMethodCard() {
 
     return (
         <div className="shoppingbag">
-            <div className="shoppinglist-position">
+            <div className="payment-position">
                 <Link onClick={goToPreviousPath} className="shoppingbag-btn-style-1">
                     <img className="previous-img" src="/images/上一頁.png" />
                     上一步
@@ -52,12 +52,12 @@ export default function PaymentMethodCard() {
                     <Form
                         onFinish={handleSubmit}
                         name="normal_login"
-                        className="register-form"
+                        className="payment-form"
                         initialValues={{ paymentMethod }}
                         form={form}
                     >
 
-                        <Form.Item name="paymentMethod" label="Payment Method: ">
+                        <Form.Item className="paymentMethod" name="paymentMethod" label="Payment Method: ">
                             <Radio.Group>
                                 <Radio value="Google">Google</Radio>
                                 <Radio value="PayPal">PayPal</Radio>

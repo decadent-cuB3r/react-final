@@ -15,7 +15,7 @@ function Payment() {
         <Content>
           <PaymentCard />
         </Content>
-        <Footer className="layout-footer">
+        <Footer className="layout-footer login-footer">
           <AppFooter />
         </Footer>
       </Layout>
