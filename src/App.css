@@ -923,6 +923,29 @@ card {
 }
 
 
+/* register css */
+
+.register-form {
+    width: 80%;
+}
+
+.register-check {
+    margin-left: 33%;
+}
+
+.register-btn-position {
+    margin-left: 40%;
+    width: 100%;
+}
+
+.register-text {
+    margin-left: 4%;
+    margin-top: 2%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
 /*footer*/
 
 .footer {
@@ -1248,6 +1271,17 @@ card {
     }
     .form-btn-position {
         margin-left: 10%;
+        width: 100%;
+    }
+    .register-form {
+        width: 80%;
+        margin: auto;
+    }
+    .register-check {
+        margin-left: 23%;
+    }
+    .register-btn-position {
+        margin-left: 20%;
         width: 100%;
     }
 }

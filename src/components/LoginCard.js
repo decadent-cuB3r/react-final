@@ -79,12 +79,12 @@ const LoginCard = ({ redirect }) => {
         <Form.Item>
           <Form.Item name="remember" noStyle>
             <Checkbox onChange={onChange} checked={remember}>
-              Remember me
+              下次登入時記得我
             </Checkbox>
           </Form.Item>
 
           <Link className="login-form__forgot" to={"/"}>
-            Forgot password
+            忘記密碼
           </Link>
         </Form.Item>
 
