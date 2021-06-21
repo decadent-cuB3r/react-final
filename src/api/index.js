@@ -113,16 +113,16 @@ export const addOrderApi = async (order) => {
 }
 
 // Comment Firebase location reference
-const allPostsCollectionRef = firebase.firestore().collection("wuJiMahjong").doc("QandA").collection("product1");
+const allPostsCollectionRef = firebase.firestore().collection("wuJiMahjong").doc("QandA").collection("product1")
 
 export const createComment = async (content) => {
   const user = auth.currentUser.displayName;
   const email = auth.currentUser.email;
   const time = firebase.firestore.FieldValue.serverTimestamp();
-  const PostsRef = await allPostsCollectionRef.doc();
-  const id = PostsRef.id;
+  const commentsRef = await allPostsCollectionRef.doc();
+  const id = commentsRef.id;
   // Store Data for Aggregation Queries
-  await PostsRef.add({
+  await commentsRef.set({
     ...content,
     id,
     time,
@@ -133,12 +133,12 @@ export const createComment = async (content) => {
 }
 
 export const getComments = async () => {
-  let posts = [];
+  let comments = [];
   let querySnapshot = await allPostsCollectionRef.get();
   querySnapshot.forEach((doc) => {
-    posts.push(doc.data());
+    comments.push(doc.data());
   });
-  return posts;
+  return comments;
 }
 
 // feed json into firebase

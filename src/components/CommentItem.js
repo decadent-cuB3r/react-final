@@ -1,21 +1,13 @@
-export default function CommentItem({ post }) {
+export default function CommentItem({ comment }) {
     return (
         <>
-            <div className="postItem">
-                <div className="postItem-blockL">
-                    <p className="postItem-title">
-                        <span>
-                            {post.title}
-                        </span>
-                    </p>
-                    <p>{post.user}：</p>
-                    <p>{post.requirement}</p>
-                </div>
-                <div className="postItem-blockR">
-                    <p>{post.applications} applications</p>
-                </div>
+            <div className="QAItem">
+                <p className="QAItem-topic">
+                    關於{comment.topic}，{comment.user}問：
+                </p>
+                <p>{comment.question}</p>
+                <hr className="QAItem-line"></hr>
             </div>
-            <div className="postItem-lineW"></div>
         </>
     );
 }

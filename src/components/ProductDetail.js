@@ -6,7 +6,6 @@ import Previous from "./previousPage";
 import TableDetailImg from "./TableDetailImg";
 import CommentSection from "./CommentSection";
 import CommentList from "./CommentList";
-import { Divider } from "antd";
 
 const DemoBox = (props) => (
   <p className={`height-${props.value}`}>{props.children}</p>
@@ -88,8 +87,8 @@ function ProductDetail({ product }) {
           )}
         </Col>
       </Row>
-      {/* <CommentList /> */}
-      {/* <CommentSection /> */}
+      <CommentList />
+      <CommentSection />
     </div>
   );
 }

@@ -1222,7 +1222,30 @@ main {
     background-color: #ffb800;
 }
 
-
+/* Q and A Item */
+.QAItem{
+    width: 100%;
+}
+.QAItem-line{
+    border: 1px solid #000;
+}
+.QAItem-topic{
+    font-weight: bold;
+}
+/* Q and A list */
+.QAList{
+    margin: auto;
+    width: 70%;
+    align-items: center;
+}
+.QAList-header{
+    background-color: #ffbf00;
+    text-align: center;
+}
+/* Q and A form */
+.QAForm{
+    background-color: #FFD976;
+}
 /*footer*/
 
 .footer {

@@ -6,13 +6,13 @@ export default function CommentSection() {
     const { dispatch } = useContext(StoreContext);
     const onPost = (e) => {
         e.preventDefault();
-        const title = document.getElementById("title");
-        const requirement = document.getElementById("requirement");
+        const topic = document.getElementById("topic");
+        const question = document.getElementById("question");
         const content = {
-            title: title.value,
-            requirement: requirement.value
+            topic: topic.value,
+            question: question.value
         };
-        if (content.title !== '' && content.requirement !== '') {
+        if (content.topic !== '' && content.question !== '') {
             CommentRequest(dispatch, content);
             document.getElementById("form").reset();
         } else {
@@ -21,17 +21,17 @@ export default function CommentSection() {
     }
 
     return (
-        <div className="commonForm postForm mt75">
-            <form className="postForm-form" id="form">
-                <div className="form-group commonForm-block">
-                    <label for="exampleInputEmail1">Title</label>
-                    <input type="email" className="form-control" id="title" />
+        <div className="QAForm">
+            <form className="QAForm-form" id="form">
+                <div className="">
+                    <label for="exampleInputEmail1">關於</label>
+                    <input type="email" className="" id="topic" />
                 </div>
-                <div className="form-group commonForm-block mb-1">
-                    <label for="exampleInputPassword1">Requirement</label>
-                    <textarea className="form-control" id="requirement" />
+                <div className="">
+                    <label for="exampleInputPassword1">你想知道什麼？</label>
+                    <textarea className="" id="question" />
                 </div>
-                <button type="submit" onClick={onPost}>POST</button>
+                <button type="submit" onClick={onPost}>提問！</button>
             </form>
         </div>
     );

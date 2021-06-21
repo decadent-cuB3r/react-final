@@ -4,17 +4,14 @@ import { setCommentList } from "../actions"
 import CommentItem from "./CommentItem";
 
 export default function CommentList() {
-  const { state: { commentPage: { posts } }, dispatch } = useContext(StoreContext);
-  useEffect(() => {
-    setCommentList(dispatch);
-  }, [posts]);
+  const { state: { commentPage: { comments } }, dispatch } = useContext(StoreContext);
+  useEffect(() => { setCommentList(dispatch); }, [comments]);
 
   return (
-    <div className="postList">
-      <div className="postList-lineY"></div>
-      <p>Sort by：Newest ▼</p>
-      {posts.map(post => (
-        <CommentItem post={post} />
+    <div className="QAList">
+      <div className="QAList-header">產品Q&A</div>
+      {comments.map((comment) => (
+        <CommentItem comment={comment} />
       ))}
     </div>
   );
