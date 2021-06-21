@@ -88,8 +88,8 @@ function ProductDetail({ product }) {
           )}
         </Col>
       </Row>
-      <CommentList />
-      <CommentSection />
+      {/* <CommentList />
+      <CommentSection /> */}
     </div>
   );
 }

@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import ChangePassword from "./pages/ChangePassword";
+import ContactUs from "./pages/ContactUs"
 
 // Use Global Context provider
 import { StoreProvider } from "./context/index";
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/product/:product" component={ProductPage} />
           <Route exact path="/detail/:productId" component={DetailPage} />
           <Route exact path="/shoppingbag" component={ShoppingPage} />
+          <Route path ="/Contact" component={ContactUs} />
           <Route exact path="/compare" component={Compare} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />

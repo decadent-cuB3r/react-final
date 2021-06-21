@@ -1,5 +1,5 @@
 import { useEffect, useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Col, Row, Button, Select, Empty, Steps, Radio } from "antd";
 import { StoreContext } from "../context";
 import { cartItemAdd, cartItemRemove } from "../actions";
@@ -28,6 +28,11 @@ export default function ShoppingDetail() {
     console.log("radio checked", e.target.value);
     setValue(e.target.value);
   };
+
+  const history = useHistory();
+  const checkoutHandler = () => {
+    history.push("/login?redirect=shipping");
+  }
 
   return (
     <div className="shoppingbag">
@@ -106,16 +111,17 @@ export default function ShoppingDetail() {
         <div className="shoppingbag-total-price">${getTotalPrice()}</div>
       </div>
       <div className="container shopping-btn-container">
-        <Link to="/product"className="shoppingbag-keepshopping-btn">
+        <Link to="/product" className="shoppingbag-keepshopping-btn">
           <Button className="shoppingbag-btn-style-1">
             <span style={{}}>繼續購物</span>
           </Button>
         </Link>
-        <Link className="shoppingbag-checkout-btn"to="/">
-          <Button className="shoppingbag-btn-style-2">
-            <span style={{}}>Start Checkout</span>
-          </Button>
-        </Link>
+        <Button
+          onClick={checkoutHandler}
+          className="shoppingbag-btn-style-2"
+        >
+          <span style={{}}>Start Checkout</span>
+        </Button>
       </div>
     </div>
   );

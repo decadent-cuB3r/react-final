@@ -1,0 +1,19 @@
+[
+    {
+        "id": "chickTwo",
+        "image": "/images/tables/first-chicken.png",
+        "compareImg1": "/images/compare-icon/cross.png",
+        "compareImg2": "/images/compare-icon/3000.png",
+        "compareImg3": "/images/compare-icon/25sec.png",
+        "compareImg4": "/images/compare-icon/cheat.png",
+        "compareImg5": "/images/compare-icon/dryAir.png",
+        "compareImg6": "/images/compare-icon/autoDebug.png",
+        "compareImg7": "/images/compare-icon/bigDice.png",
+        "compareImg8": "/images/compare-icon/bigPanel.png",
+        "compareImg9": "/images/compare-icon/noiseReduce.png",
+        "compareImg10": "/images/compare-icon/extraFunction.png",
+        "compareImg11": "/images/compare-icon/1yearWarr.png",
+        "compareImg12": "/images/compare-icon/motorWarr.png",
+        "compareImg13": "/images/compare-icon/cross.png"
+    }
+]

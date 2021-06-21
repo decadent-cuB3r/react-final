@@ -76,7 +76,7 @@ export default function Header() {
             <br />
             Annouce
           </Link>
-          <Link to className="header-nav-text">
+          <Link to="/ContactUs" className="header-nav-text">
             聯絡我們
             <br />
             Contact
