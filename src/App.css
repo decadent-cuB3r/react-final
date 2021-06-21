@@ -1168,6 +1168,58 @@ main {
     margin: auto;
     border: solid 2px #ffb800;
     margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.compare-space {
+    width: 30%;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.table-img {
+    width: 100%;
+}
+
+.compare-outside {
+    width: 70%;
+    margin: auto;
+}
+
+.feature-img {
+    margin: auto;
+}
+
+.compare-select {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.compare-price {
+    margin: auto;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-top: 4%;
+}
+
+.compare-btn {
+    color: #ffb800;
+    font-size: 18px;
+    font-weight: bolder;
+    width: 50%;
+    height: 45px;
+    margin: auto;
+    border: #ffb800 solid 5px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 38px;
+    margin-top: 4%;
+    transition: 0.3s;
+}
+
+.compare-btn:hover {
+    color: #fff;
+    background-color: #ffb800;
 }
 
 
@@ -1354,6 +1406,15 @@ main {
     card {
         width: 50%;
     }
+    #selectthree {
+        display: none;
+    }
+    .compare-space {
+        width: 40%;
+    }
+    .compare-outside {
+        width: 90%;
+    }
 }
 
 
@@ -1470,6 +1531,23 @@ main {
         font-size: 1rem;
         font-weight: 500;
     }
+    .compare-outside {
+        width: 90%;
+    }
+    .compare-space {
+        width: 45%;
+    }
+    .table-img {
+        width: 80%;
+        margin: auto;
+    }
+    .feature-img {
+        width: 80%;
+    }
+    .compare-select {
+        width: 100%;
+        margin-left: 0%;
+    }
 }
 
 
@@ -1541,6 +1619,17 @@ main {
     }
     .ant-steps-item-title {
         font-size: 14px;
+    }
+    .compare-title {
+        font-size: 30px;
+    }
+    .compare-little-text {
+        font-size: 16px;
+    }
+    .compare-btn {
+        font-size: 16px;
+        width: 60%;
+        border: solid #ffb800 4px;
     }
 }
 
