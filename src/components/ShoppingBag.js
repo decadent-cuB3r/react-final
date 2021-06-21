@@ -31,91 +31,121 @@ export default function ShoppingDetail() {
 
   return (
     <div className="shoppingbag">
-      <Steps className="shoppingbag-steps" current={0}>
-        <Step className="shoppingbag-step" title="選購品項" />
-        <Step
-          className="shoppingbag-step"
-          title="填寫資料"
-          subTitle=""
-          description=""
-        />
-        <Step
-          className="shoppingbag-step"
-          title="完成訂購"
-          subTitle=""
-          description=""
-        />
-      </Steps>
-      <div className="shoppingbag-text bg-yellow">購物清單</div>
-      {cartItems.length === 0 ? (
-        <Empty
-          image="https://fireplace.tw/wp-content/themes/mrtailor/images/empty_cart_retina.png"
-          description="請你去買一張電動桌"
-        />
-      ) : (
-        cartItems.map((item) => (
-          <li key={item.id} className="shoppingbag-item">
-            <Link to={`/product/${item.id}`}>
-              <div className="shoppingbag-image">
-                <img src={item.image} alt={item.name} />
-              </div>
-            </Link>
-            <div className="shoppingbag-item-content">
-              <div className="shoppingbag-name">{item.name}</div>
-              <div className="shoppingbag-qty">
-                數量:{" "}
-                <Select
-                  defaultValue={item.qty}
-                  className="select-style"
-                  onChange={(qty) => cartItemAdd(dispatch, item, qty)}
-                >
-                  {[...Array(item.countInStock).keys()].map((x) => (
-                    <Option key={x + 1} value={x + 1}>
-                      {x + 1}
-                    </Option>
-                  ))}
-                </Select>
-              </div>
-            </div>
-            <div>
-              <div className="shoppingbag-price">${item.price * item.qty}</div>
-              <div
-                className="shoppingbag-item-delete"
-                onClick={() => cartItemRemove(dispatch, item.id)}
-              >
-                <img
-                  src="https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png"
-                  alt="remove"
-                />
-              </div>
-            </div>
-          </li>
-        ))
-      )}
-      <div className="bg-yellow shoppingbag-shipping">送貨方式</div>
-      <Radio.Group onChange={onChange} value={value}>
-        <Radio value={1}>面交/自取</Radio>
-        <Radio value={2}>五吉宅急便</Radio>
-      </Radio.Group>
-      <div className="shoppingbag-total-price-wrap">
-        <div>
-          合計
-          <br />
-          運送方式：{value === 1 ? "面交/自取" : "五吉宅急便"}
+      <div className="shoppinglist-position">
+        <Link to="/product" className="shoppingbag-btn-style-1">
+          <img className="previous-img" src="/images/上一頁.png" />
+          繼續購物
+        </Link>
+        <Steps className="shoppingbag-steps" current={0}>
+          <Step className="shoppingbag-step" title="選購品項" />
+          <Step
+            className="shoppingbag-step"
+            title="填寫資料"
+            subTitle=""
+            description=""
+          />
+          <Step
+            className="shoppingbag-step"
+            title="完成訂購"
+            subTitle=""
+            description=""
+          />
+        </Steps>
+        <div className="shoppingbag-text bg-yellow">購物車</div>
+        <div className="cart-outline">
+          {cartItems.length === 0 ? (
+            <Empty
+              image="https://fireplace.tw/wp-content/themes/mrtailor/images/empty_cart_retina.png"
+              description="請你去買一張電動桌"
+            />
+          ) : (
+            cartItems.map((item) => (
+              <li key={item.id} className="shoppingbag-item">
+                <Link to={`/product/${item.id}`}>
+                  <div className="shoppingbag-image">
+                    <img src={item.image} alt={item.name} />
+                  </div>
+                </Link>
+                <div className="shoppingbag-item-content">
+                  <div className="shoppingbag-name">{item.name}</div>
+                  <div className="shoppingbag-qty">
+                    數量:{" "}
+                    <Select
+                      defaultValue={item.qty}
+                      className="select-style"
+                      onChange={(qty) => cartItemAdd(dispatch, item, qty)}
+                    >
+                      {[...Array(item.countInStock).keys()].map((x) => (
+                        <Option key={x + 1} value={x + 1}>
+                          {x + 1}
+                        </Option>
+                      ))}
+                    </Select>
+                  </div>
+                </div>
+                <div className="price-delete-block">
+                  <div className="shoppingbag-price">
+                    ${item.price * item.qty}
+                  </div>
+                  <div
+                    className="shoppingbag-item-delete"
+                    onClick={() => cartItemRemove(dispatch, item.id)}
+                  >
+                    <img
+                      src="https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png"
+                      alt="remove"
+                    />
+                  </div>
+                </div>
+              </li>
+            ))
+          )}
         </div>
-        <div className="shoppingbag-total-price">${getTotalPrice()}</div>
+
+        <Radio.Group onChange={onChange} value={value} className="transport">
+          <div className=" shoppingbag-shipping">
+            <span className="deliver">送貨方式：</span>
+            <Radio value={1}>面交/自取</Radio>
+            <Radio value={2}>五吉宅急便</Radio>
+          </div>
+        </Radio.Group>
       </div>
-      <div className="container shopping-btn-container">
-        <Link to="/product"className="shoppingbag-keepshopping-btn">
-          <Button className="shoppingbag-btn-style-1">
-            <span style={{}}>繼續購物</span>
-          </Button>
-        </Link>
-        <Link className="shoppingbag-checkout-btn"to="/">
-          <Button className="shoppingbag-btn-style-2">
-            <span style={{}}>Start Checkout</span>
-          </Button>
-        </Link>
+      <div className="summary-position">
+        <div className="summary-block">
+          <div className="summary-inside-block">
+            <div className="summary-text-total">總計</div>
+            <hr className="summaryLine" />
+            <div className="summary-text">
+              小計：<span className="summary-float">${getTotalPrice()}</span>
+              <br/>
+              運費：<span className="summary-float">$0</span>
+              <br/>
+              <span className="discount">使用優惠代碼</span>
+            </div>
+            <hr className="summaryLine" />
+            <div className="shoppingbag-total-price-wrap">
+              <div className="summary-text">
+                運送方式：
+                <br />
+                合計
+              </div>
+
+              <div className="shoppingbag-total-price">
+                {value === 1 ? "面交/自取" : "五吉宅急便"}
+                <br />${getTotalPrice()}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container shopping-btn-container">
+          <Link className="shoppingbag-checkout-btn" to="/">
+            <Button className="shoppingbag-btn-style-2">
+              <span style={{ fontSize: 18, fontWeight: "bolder" }}>
+                前往結帳
+              </span>
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

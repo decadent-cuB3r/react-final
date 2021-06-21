@@ -807,7 +807,7 @@ span.ham-menu-bar3--touch {
 }
 
 
-/*produt detail*/
+/*product detail*/
 
 .productItem-functions {
     display: flex;
@@ -946,6 +946,210 @@ card {
 }
 
 
+/* shoppingbag */
+
+main {
+    background-color: #fff;
+}
+
+.shoppingbag {
+    height: auto;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.shoppinglist-position {
+    width: 70%;
+}
+
+.summary-position {
+    width: 25%;
+}
+
+.shoppingbag-steps {
+    margin: 1rem 0;
+}
+
+.shoppingbag-text {
+    color: #fff;
+    text-align: left;
+    padding-left: 2%;
+    font-size: 18px;
+    font-weight: bolder;
+    height: 30px;
+    line-height: 30px;
+}
+
+.shoppingbag-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.shoppingbag-image img {
+    max-width: 10rem;
+    max-height: 10rem;
+    flex: 1 1;
+    margin-left: 12%;
+}
+
+.price-delete-block {
+    margin-right: 3%;
+}
+
+.shoppingbag-item-content {
+    margin-left: 2rem;
+    flex: 8 1;
+}
+
+.shoppingbag-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.shoppingbag-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.shoppingbag-item-delete img {
+    width: 1.3rem;
+    opacity: 0.8;
+    text-align: right;
+    cursor: pointer;
+    float: right;
+}
+
+.transport {
+    width: 100%;
+}
+
+.shoppingbag-shipping {
+    line-height: 30px;
+    height: 30px;
+    font-size: 16px;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.deliver {
+    margin-right: 2%;
+}
+
+.shoppingbag-total-price-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shoppingbag-total-price {
+    font-weight: bold;
+    text-align: right;
+}
+
+.shoppingbag-checkout-btn {
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+}
+
+.shoppingbag-btn-style-1 {
+    width: 20%;
+    color: #000;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.previous-img {
+    width: 15px;
+    height: 25px;
+    margin-right: 0.5%;
+}
+
+.ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-icon {
+    background: #ffb800;
+    border-color: #ffb800;
+}
+
+.shoppingbag-btn-style-1:hover {
+    color: #000;
+}
+
+.shoppingbag-btn-style-2 {
+    border: 0 #fff;
+    width: 166px;
+    height: 48px;
+    color: #fff;
+    background-color: #ffb800;
+}
+
+.shoppingbag-btn-style-2:hover {
+    border: 0 #fff;
+    width: 100%;
+    color: #fff;
+    background-color: #ffd976;
+}
+
+.cart-outline {
+    border: solid 2px rgb(214, 214, 214);
+}
+
+
+/* summary */
+
+.summary-block {
+    border: solid 2px #000;
+    margin-bottom: 5%;
+    height: 50%;
+}
+
+.summary-position {
+    margin-top: 8%;
+}
+
+.summaryLine {
+    border: solid 1px #000;
+}
+
+.summary-inside-block {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding-top: 8%;
+}
+
+.summary-text {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.summary-text-total {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.summary-float {
+    float: right;
+}
+
+.discount {
+    color: #39A0FF;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.discount:hover {
+    border-bottom: solid 1px #39A0FF;
+}
+
+
 /*footer*/
 
 .footer {
@@ -1045,6 +1249,20 @@ card {
         margin: auto;
         margin-bottom: 2%;
     }
+    .shoppingbag {
+        display: block;
+    }
+    .shoppinglist-position,
+    .summary-position {
+        width: 100%;
+    }
+    .summary-inside-block {
+        margin-top: 1%;
+        margin-bottom: 8%;
+    }
+    .summary-position {
+        margin-bottom: 6%;
+    }
 }
 
 
@@ -1092,9 +1310,6 @@ card {
     #fb,
     #line {
         display: none;
-    }
-    .header-icon {
-        margin-left: 12%;
     }
     .header-nav {
         width: 350px;
@@ -1223,6 +1438,13 @@ card {
     card {
         width: 80%;
     }
+    .shoppingbag-price {
+        font-size: 18px;
+    }
+    .shoppingbag-name {
+        font-size: 1rem;
+        font-weight: 500;
+    }
 }
 
 
@@ -1284,6 +1506,17 @@ card {
         margin-left: 20%;
         width: 100%;
     }
+    .shoppingbag-image img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .shoppingbag-name {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .ant-steps-item-title {
+        font-size: 14px;
+    }
 }
 
 .container {
@@ -1291,126 +1524,6 @@ card {
     display: flex;
     align-self: center;
     margin: auto;
-}
-
-
-/* shoppingbag */
-
-main {
-    background-color: #fff;
-}
-
-.shoppingbag {
-    width: 70%;
-    margin: auto;
-    background-color: #fff;
-}
-
-.shoppingbag-steps {
-    margin: 1rem 0;
-}
-
-.shoppingbag-text {
-    color: black;
-    text-align: center;
-    font-size: 1rem;
-    height: 30px;
-    line-height: 30px;
-}
-
-.shoppingbag-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 0.1rem #c0c0c0 solid;
-}
-
-.shoppingbag-image img {
-    max-width: 10rem;
-    max-height: 10rem;
-    flex: 1 1;
-}
-
-.shoppingbag-item-content {
-    margin-left: 2rem;
-    flex: 8 1;
-}
-
-.shoppingbag-name {
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-
-.shoppingbag-price {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: right;
-}
-
-.shoppingbag-item-delete img {
-    width: 1.3rem;
-    opacity: 0.8;
-    text-align: right;
-    cursor: pointer;
-    float: right;
-}
-
-.shoppingbag-shipping {
-    text-align: center;
-    line-height: 30px;
-    height: 30px;
-}
-
-.shoppingbag-total-price-wrap {
-    display: flex;
-    justify-content: space-between;
-}
-
-.shoppingbag-total-price {
-    font-weight: bold;
-    text-align: right;
-}
-
-.shoppingbag-keepshopping-btn {
-    text-align: center;
-    background-color: #fff;
-    width: 100%;
-}
-
-.shoppingbag-checkout-btn {
-    text-align: center;
-    background-color: #fff;
-    width: 100%;
-}
-
-.shoppingbag-btn-style-1 {
-    border: 0 #fff;
-    width: 100%;
-    color: #fff;
-    background-color: hsl(0, 0%, 20%);
-}
-
-.shoppingbag-btn-style-1:hover {
-    border: 0 #fff;
-    width: 100%;
-    color: #fff;
-    background-color: rgb(129, 129, 129);
-}
-
-.shoppingbag-btn-style-2 {
-    border: 0 #fff;
-    width: 100%;
-    color: #fff;
-    background-color: #ffb800;
-}
-
-.shoppingbag-btn-style-2:hover {
-    border: 0 #fff;
-    width: 100%;
-    color: #fff;
-    background-color: #e9aa0a;
 }
 
 @media (max-width: 992px) {
