@@ -19,7 +19,6 @@ export default function CompareItem({ chosenItem }) {
             <img className="feature-img" src={chosenItem[0].compareImg11} alt="No-Warnings" />
             <img className="feature-img" src={chosenItem[0].compareImg12} alt="No-Warnings" />
             <img className="feature-img" src={chosenItem[0].compareImg13} alt="No-Warnings" />
-            <img className="feature-img" src={chosenItem[0].compareImg14} alt="No-Warnings" />
         </div>
     )
 }

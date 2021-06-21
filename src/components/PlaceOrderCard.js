@@ -108,7 +108,7 @@ export default function PaymentMethodCard() {
                   ))
                 )}
                 <div className="cart-total-price-wrap">
-                  <span>總共</span>
+                  <span>總共</span><span class="ensp"></span>
                   <div className="cart-total-price">${getTotalPrice()}</div>
                 </div>
               </div>

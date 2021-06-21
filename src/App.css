@@ -7,6 +7,11 @@
     background-color: #ffd976;
 }
 
+.ensp:after {
+    content: '\2002';
+    speak: none;
+}
+
 
 /* RWD Container */
 
@@ -1271,8 +1276,16 @@ main {
 
 /* placeorder */
 
+.order-position {
+    width: 70%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
 .placeorder-position {
     width: 100%;
+    margin: auto;
     margin-bottom: 5%;
 }
 
@@ -1335,6 +1348,13 @@ li {
     margin: auto;
     margin-top: 3%;
     margin-bottom: 3%;
+}
+
+
+/* spinner */
+
+.spinner-wrap {
+    height: 100%;
 }
 
 
