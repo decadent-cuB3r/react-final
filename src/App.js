@@ -17,6 +17,7 @@ import ContactUs from "./pages/ContactUs"
 import Shipping from "./pages/Shipping";
 import Payment from "./pages/Payment";
 import PlaceOrder from "./pages/PlaceOrder";
+import Order from "./pages/Order";
 
 // Use Global Context provider
 import { StoreProvider } from "./context/index";
@@ -32,7 +33,7 @@ function App() {
           <Route exact path="/detail/:productId" component={DetailPage} />
           <Route exact path="/shoppingbag" component={ShoppingPage} />
           <Route path="/ContactUs" component={ContactUs} />
-          <Route exact path="/compare" component={Compare} />
+          <Route path="/compare" component={Compare} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Profile} />
@@ -40,6 +41,7 @@ function App() {
           <Route path="/shipping" component={Shipping} />
           <Route path="/payment" component={Payment} />
           <Route path="/placeorder" component={PlaceOrder} />
+          <Route path="/order" component={Order} />
           <Route path="/admin/feeder" component={Feeder} />
         </Switch>
       </BrowserRouter>

@@ -254,7 +254,8 @@ export const addOrdertoFirebase = async (dispatch, cart) => {
     dispatch({ type: FAIL_ORDER_CREATE, payload: error });
     return null;
   }
-}
+};
+
 // Comment on Product
 export const CommentRequest = async (dispatch, content) => {
   dispatch({ type: BEGIN_COMMENT_REQUEST });
@@ -270,7 +271,7 @@ export const CommentRequest = async (dispatch, content) => {
     dispatch({ type: FAIL_COMMENT_REQUEST, payload: error });
     return null;
   }
-}
+};
 
 export const setCommentList = async (dispatch) => {
   const posts = await getComments();
@@ -278,7 +279,7 @@ export const setCommentList = async (dispatch) => {
     type: SET_COMMENTS_LIST,
     payload: { posts },
   });
-}
+};
 
 // export const compareItemAdd = (dispatch, product, qty) => {
 //   const item = {
