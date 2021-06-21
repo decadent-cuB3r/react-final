@@ -22,6 +22,10 @@ import {
   BEGIN_PRODUCTS_FEED,
   SUCCESS_PRODUCTS_FEED,
   FAIL_PRODUCTS_FEED,
+  BEGIN_COMMENT_REQUEST,
+  SUCCESS_COMMENT_REQUEST,
+  FAIL_COMMENT_REQUEST,
+  SET_COMMENTS_LIST,
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -90,95 +94,132 @@ function reducer(state, action) {
       cartItems = state.cartItems.filter((x) => x.id !== action.payload);
       return { ...state, cartItems };
 
-      case BEGIN_LOGIN_REQUEST:
-        return { ...state, userSignin: { ...state.userSignin, loading: true } };
-      case SUCCESS_LOGIN_REQUEST:
-        return {
-          ...state,
-          userSignin: {
-            ...state.userSignin,
-            loading: false,
-            userInfo: action.payload,
-            error: "",
-          },
-        };
-      case FAIL_LOGIN_REQUEST:
-        return {
-          ...state,
-          userSignin: {
-            ...state.userSignin,
-            loading: false,
-            userInfo: null,
-            error: action.payload,
-          },
-        };
-      case BEGIN_UPDATE_USERINFO:
-        return { ...state, userSignin: { ...state.userSignin, loading: true } };
-      case SUCCESS_UPDATE_USERINFO:
-        return {
-          ...state,
-          userSignin: {
-            ...state.userSignin,
-            loading: false,
-            userInfo: action.payload,
-            error: "",
-          },
-        };
-      case FAIL_UPDATE_USERINFO:
-        return {
-          ...state,
-          userSignin: {
-            ...state.userSignin,
-            loading: false,
-            error: action.payload,
-          },
-        };
-      case LOGOUT_REQUEST:
-        cartItems = [];
-        return {
-          ...state,
-          userSignin: {
-            ...state.userSignin,
-            userInfo: null,
-          },
-        };
-      case REMEMBER_LOGIN:
-        return {
-          ...state,
-          userSignin: {
-            ...state.userSignin,
-            remember: action.payload,
-          },
-        };
-      case BEGIN_REGISTER_REQUEST:
-        return {
-          ...state,
-          userRegister: { ...state.userRegister, loading: true },
-        };
-      case SUCCESS_REGISTER_REQUEST:
-        return {
-          ...state,
-          userRegister: {
-            ...state.userRegister,
-            loading: false,
-            userInfo: action.payload,
-            error: "",
-          },
-          userSignin: {
-            ...state.userSignin,
-            userInfo: action.payload,
-          },
-        };
-      case FAIL_REGISTER_REQUEST:
-        return {
-          ...state,
-          userRegister: {
-            ...state.userRegister,
-            loading: false,
-            userInfo: null,
-            error: action.payload,
-          },
-        };
+    case BEGIN_LOGIN_REQUEST:
+      return { ...state, userSignin: { ...state.userSignin, loading: true } };
+    case SUCCESS_LOGIN_REQUEST:
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          loading: false,
+          userInfo: action.payload,
+          error: "",
+        },
+      };
+    case FAIL_LOGIN_REQUEST:
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          loading: false,
+          userInfo: null,
+          error: action.payload,
+        },
+      };
+    case BEGIN_UPDATE_USERINFO:
+      return { ...state, userSignin: { ...state.userSignin, loading: true } };
+    case SUCCESS_UPDATE_USERINFO:
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          loading: false,
+          userInfo: action.payload,
+          error: "",
+        },
+      };
+    case FAIL_UPDATE_USERINFO:
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          loading: false,
+          error: action.payload,
+        },
+      };
+    case LOGOUT_REQUEST:
+      cartItems = [];
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          userInfo: null,
+        },
+      };
+    case REMEMBER_LOGIN:
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          remember: action.payload,
+        },
+      };
+    case BEGIN_REGISTER_REQUEST:
+      return {
+        ...state,
+        userRegister: { ...state.userRegister, loading: true },
+      };
+    case SUCCESS_REGISTER_REQUEST:
+      return {
+        ...state,
+        userRegister: {
+          ...state.userRegister,
+          loading: false,
+          userInfo: action.payload,
+          error: "",
+        },
+        userSignin: {
+          ...state.userSignin,
+          userInfo: action.payload,
+        },
+      };
+    case FAIL_REGISTER_REQUEST:
+      return {
+        ...state,
+        userRegister: {
+          ...state.userRegister,
+          loading: false,
+          userInfo: null,
+          error: action.payload,
+        },
+      };
+    case BEGIN_COMMENT_REQUEST:
+      return {
+        ...state,
+        postInfo: {
+          ...state.postInfo,
+          loading: true,
+          success: false,
+        }
+      };
+    case SUCCESS_COMMENT_REQUEST:
+      return {
+        ...state,
+        postInfo: {
+          ...state.postInfo,
+          loading: false,
+          success: true,
+          error: null,
+        },
+      };
+    case FAIL_COMMENT_REQUEST:
+      return {
+        ...state,
+        postInfo: {
+          ...state.postInfo,
+          loading: false,
+          success: false,
+          error: action.payload,
+        },
+      };
+    case SET_COMMENTS_LIST:
+      return {
+        ...state,
+        page: {
+          ...state.page,
+          ...action.payload
+        },
+      };
     // case Compare_ITEM_ADD:
     //   const Item = action.payload;
     //   const Product = state.cartItems.find((x) => x.id === Item.id);

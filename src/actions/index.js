@@ -24,6 +24,7 @@ import {
   BEGIN_COMMENT_REQUEST,
   SUCCESS_COMMENT_REQUEST,
   FAIL_COMMENT_REQUEST,
+  SET_COMMENTS_LIST,
 } from "../utils/constants";
 
 import {
@@ -34,6 +35,8 @@ import {
   updateUserInfoApi,
   signOut,
   feedProducts,
+  createComment,
+  getComments,
 } from "../api";
 
 export const activeNavItemSet = (dispatch, activeNavItem) => {
@@ -191,6 +194,7 @@ export const logoutFromFirebase = async (dispatch) => {
   dispatch({ type: LOGOUT_REQUEST });
 }
 
+// Feed Action
 export const feedJSONToFirebase = async (dispatch) => {
   dispatch({ type: BEGIN_PRODUCTS_FEED });
   try {
@@ -200,6 +204,31 @@ export const feedJSONToFirebase = async (dispatch) => {
     console.log(error);
     dispatch({ type: FAIL_PRODUCTS_FEED, payload: error });
   }
+}
+
+// Comment on Product
+export const CommentRequest = async (dispatch, content) => {
+  dispatch({ type: BEGIN_COMMENT_REQUEST });
+  try {  
+    const postInfo = await createComment(content);
+    dispatch({ 
+      type: SUCCESS_COMMENT_REQUEST, 
+      payload: postInfo 
+    });
+    return postInfo;
+  } catch (error) {
+    console.log(error);
+    dispatch({ type: FAIL_COMMENT_REQUEST, payload: error });
+    return null;
+  }  
+}
+
+export const setCommentList = async (dispatch) => {
+  const posts = await getComments();
+  dispatch({
+    type: SET_COMMENTS_LIST,
+    payload: { posts },
+  });
 }
 
 // export const compareItemAdd = (dispatch, product, qty) => {
