@@ -55,16 +55,16 @@ export default function CompareDetail() {
   return (
     <>
       <Row>
-        <h1>
+        <h1 className="compare-title">
           比較麻將桌機型
         </h1>
       </Row>
       <Row>
-        <p>
+        <p className="compare-little-text">
           機型比較讓你一目了然免煩惱
         </p>
       </Row>
-      <hr className="compare_line"></hr>
+      <hr className="compare-line"></hr>
       <Row>
         <Col>
           <Select

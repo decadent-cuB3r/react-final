@@ -9,8 +9,6 @@ export default function Hamburger() {
   const [isOnTouch, setIsOnTouch] = useState(false);
   const handleCloseDrawer = () => setIsOnTouch(false);
 
-
-
   return (
     <>
       <HamMenu onClick={() => setIsOnTouch(!isOnTouch)} isOnTouch={isOnTouch} />

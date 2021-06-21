@@ -1149,6 +1149,28 @@ main {
 }
 
 
+/* compare */
+
+.compare-title {
+    font-size: 36px;
+    font-weight: bolder;
+    margin: auto;
+}
+
+.compare-little-text {
+    font-size: 20px;
+    margin: auto;
+    font-weight: bolder;
+}
+
+.compare-line {
+    width: 70%;
+    margin: auto;
+    border: solid 2px #ffb800;
+    margin-top: 1%;
+}
+
+
 /*footer*/
 
 .footer {
