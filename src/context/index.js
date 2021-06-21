@@ -11,6 +11,7 @@ import {
   BEGIN_LOGIN_REQUEST,
   SUCCESS_LOGIN_REQUEST,
   FAIL_LOGIN_REQUEST,
+  LOGOUT_REQUEST,
   REMEMBER_LOGIN,
   BEGIN_REGISTER_REQUEST,
   SUCCESS_REGISTER_REQUEST,
@@ -18,7 +19,6 @@ import {
   BEGIN_UPDATE_USERINFO,
   SUCCESS_UPDATE_USERINFO,
   FAIL_UPDATE_USERINFO,
-  LOGOUT_REQUEST,
   // BEGIN_PRODUCTS_FEED,
   // SUCCESS_PRODUCTS_FEED,
   // FAIL_PRODUCTS_FEED,
@@ -28,6 +28,9 @@ import {
   SET_COMMENTS_LIST,
   SAVE_SHIPPING_ADDRESS,
   SAVE_PAYMENT_METHOD,
+  BEGIN_ORDER_CREATE,
+  SUCCESS_ORDER_CREATE,
+  FAIL_ORDER_CREATE,
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -54,6 +57,12 @@ const initialState = {
       : {},
     paymentMethod: 'Google',
   },
+  orderInfo: {
+    loading: false,
+    order: localStorage.getItem('orderInfo')
+      ? JSON.parse(localStorage.getItem('orderInfo'))
+      : { id: "" }
+  },
   userSignin: {
     loading: false,
     userInfo: localStorage.getItem("userInfo")
@@ -67,9 +76,6 @@ const initialState = {
     userInfo: null,
     error: "",
   },
-  commentPage: {
-    posts: [],
-  }
 };
 
 function reducer(state, action) {
@@ -204,41 +210,63 @@ function reducer(state, action) {
           error: action.payload,
         },
       };
-    case BEGIN_COMMENT_REQUEST:
+    // case BEGIN_COMMENT_REQUEST:
+    //   return {
+    //     ...state,
+    //     commentInfo: {
+    //       ...state.commentInfo,
+    //       loading: true,
+    //       success: false,
+    //     }
+    //   };
+    // case SUCCESS_COMMENT_REQUEST:
+    //   return {
+    //     ...state,
+    //     commentInfo: {
+    //       ...state.commentInfo,
+    //       loading: false,
+    //       success: true,
+    //       error: null,
+    //     },
+    //   };
+    // case FAIL_COMMENT_REQUEST:
+    //   return {
+    //     ...state,
+    //     commentInfo: {
+    //       ...state.commentInfo,
+    //       loading: false,
+    //       success: false,
+    //       error: action.payload,
+    //     },
+    //   };
+    // case SET_COMMENTS_LIST:
+    //   return {
+    //     ...state,
+    //     page: {
+    //       ...state.page,
+    //       ...action.payload
+    //     },
+    //   };
+    case BEGIN_ORDER_CREATE:
+      return { ...state, orderInfo: { ...state.orderInfo, loading: true } };
+    case SUCCESS_ORDER_CREATE:
       return {
         ...state,
-        commentInfo: {
-          ...state.commentInfo,
-          loading: true,
-          success: false,
-        }
-      };
-    case SUCCESS_COMMENT_REQUEST:
-      return {
-        ...state,
-        commentInfo: {
-          ...state.commentInfo,
+        orderInfo: {
+          ...state.orderInfo,
           loading: false,
-          success: true,
-          error: null,
+          order: action.payload,
+          error: "",
         },
       };
-    case FAIL_COMMENT_REQUEST:
+    case FAIL_ORDER_CREATE:
       return {
         ...state,
-        commentInfo: {
-          ...state.commentInfo,
+        orderInfo: {
+          ...state.orderInfo,
           loading: false,
-          success: false,
+          order: { id: "" },
           error: action.payload,
-        },
-      };
-    case SET_COMMENTS_LIST:
-      return {
-        ...state,
-        page: {
-          ...state.page,
-          ...action.payload
         },
       };
     // case Compare_ITEM_ADD:

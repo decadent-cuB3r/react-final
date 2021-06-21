@@ -3,9 +3,9 @@ import { StoreContext } from "../context";
 import { useContext, useEffect } from "react";
 import { cartItemAdd } from "../actions";
 
-export default function AddToCart({product, qty}) {
+export default function AddToCart({ product, qty }) {
   const {
-    state: { cartItems },
+    state: { cart: { cartItems } },
     dispatch,
   } = useContext(StoreContext);
 

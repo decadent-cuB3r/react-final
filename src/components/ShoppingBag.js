@@ -9,7 +9,7 @@ const { Step } = Steps;
 
 export default function ShoppingDetail() {
   const { state: { cart: { cartItems } }, dispatch } = useContext(StoreContext);
-
+  const history = useHistory();
   const getTotalPrice = () => {
     return cartItems.length > 0
       ? cartItems.reduce((sum, item) => sum + item.price * item.qty, 0)
@@ -26,7 +26,6 @@ export default function ShoppingDetail() {
     setValue(e.target.value);
   };
 
-  const history = useHistory();
   const checkoutHandler = () => {
     if (value === 1) {
       history.push("login?redirect=payment");
