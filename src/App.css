@@ -733,6 +733,9 @@ span.ham-menu-bar3--touch {
     background-color: #ffb800;
 }
 
+.previous-button{
+    display: flex;
+}
 
 /* productdetail */
 
@@ -1249,10 +1252,47 @@ main {
 .QAList-header{
     background-color: #ffbf00;
     text-align: center;
+    height: 47px;
+    line-height: 47px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
 }
 /* Q and A form */
 .QAForm{
+    width: 70%;
+    margin: auto;
+}
+.QAForm-form{
+    margin: auto;
     background-color: #FFD976;
+    width: 100%;
+    align-items: center;
+    padding: 0 30px 30px 30px;
+}
+.QAForm-Topic{
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+}
+.QAForm-Input{
+    width: 100px;
+    height: 24px;
+}
+.QAForm-TextArea{
+    width: 100%;
+    height: 200px;
+}
+.QAForm-btn{
+    color: #ffffff;
+    background: #ffb524;
+    border: #ffb524;
+    float: right;
+    width: 128px;
+    height: 43px;
+    text-align: center;
+    margin-top: 22px;
 }
 
 /* payment */

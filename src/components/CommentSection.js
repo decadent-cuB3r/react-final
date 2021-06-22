@@ -23,16 +23,14 @@ export default function CommentSection() {
     return (
         <div className="QAForm">
             <form className="QAForm-form" id="form">
-                <div className="">
-                    <label for="exampleInputEmail1">關於</label>
-                    <input type="email" className="" id="topic" />
+                <div className="QAForm-Topic">
+                    提出
+                    <input placeholder="關於" type="email" className="QAForm-Input" id="topic" />
+                    的問題(為保障您的交易安全，留言內容請勿涉及個人資訊、外部導入連結。)
                 </div>
-                <div className="">
-                    <label for="exampleInputPassword1">你想知道什麼？</label>
-                    <textarea className="" id="question" />
-                </div>
-                <button type="submit" onClick={onPost}>提問！</button>
+                <textarea placeholder="請留下你的提問..." className="QAForm-TextArea" id="question" />
             </form>
+            <button className="QAForm-btn" type="submit" onClick={onPost}>送出</button>
         </div>
     );
 }

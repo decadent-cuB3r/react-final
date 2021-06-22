@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { Button } from "antd";
+import { Button } from "antd"
 
 export default function PreviousButton() {
   let history = useHistory();
@@ -8,7 +8,8 @@ export default function PreviousButton() {
   };
   return (
     <div className="previous-button">
-      <Button className="btn-color" onClick={goToPreviousPath}>回上頁</Button>
+      <img src="/images/上一頁.png" alt="No-Warnings" />
+      <div className="ensp">回上頁</div>
     </div>
   );
 }
