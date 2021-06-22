@@ -30,6 +30,9 @@ export default function Hamburger() {
         <Link to="/product" className="header-ham-text">
           產品資訊 Product
         </Link>
+        <Link to="/compare" className="header-ham-text">
+          產品比較 Compare
+        </Link>
         <Link to className="header-ham-text">
           最新消息 News
         </Link>
