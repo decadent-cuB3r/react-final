@@ -14,13 +14,13 @@ import products from "../json/products.json";
 // INITIALIZE FIREBASE
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyA32dvcFypCXIFhuD49i0xBjvb5R5Su4oc",
-  authDomain: "learn-react-2bd94.firebaseapp.com",
-  projectId: "learn-react-2bd94",
-  storageBucket: "learn-react-2bd94.appspot.com",
-  messagingSenderId: "415435736263",
-  appId: "1:415435736263:web:f01a050835bc1090ce6ae2",
-  measurementId: "G-TX8X3GMV7L"
+  apiKey: "AIzaSyANyWV6VbgLt-c80-pQp-LrfadlPoLA8D4",
+  authDomain: "react-finals.firebaseapp.com",
+  projectId: "react-finals",
+  storageBucket: "react-finals.appspot.com",
+  messagingSenderId: "516098433191",
+  appId: "1:516098433191:web:68cf24cceaf213b8c6bb82",
+  measurementId: "G-WJ2NYDMTD4"
 };
 
 firebase.initializeApp(firebaseConfig);
