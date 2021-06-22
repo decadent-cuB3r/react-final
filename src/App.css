@@ -757,8 +757,7 @@ span.ham-menu-bar3--touch {
     font-size: 22px;
     font-weight: bolder;
     width: auto;
-    text-align: center;
-    background-color: #ffb524;
+    color: #ffb800;
 }
 
 .product-description--border {
@@ -781,7 +780,11 @@ span.ham-menu-bar3--touch {
     justify-content: space-between;
     flex-wrap: wrap row;
 }
-
+.product-price{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 0%;
+}
 .product-qty {
     margin-bottom: 4%;
     justify-content: space-between;
@@ -811,7 +814,9 @@ span.ham-menu-bar3--touch {
 .productdetail-intro {
     max-width: 100%;
 }
-
+.product-status{
+    margin-top: 2%;
+}
 
 /*product detail*/
 
@@ -821,6 +826,20 @@ span.ham-menu-bar3--touch {
     margin-top: 2%;
 }
 
+.addtocart-btn{
+    background-color: #ffb800;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    height: 30%;
+    border: none;
+    margin-bottom: 5%;
+}
+.addtocart-btn:hover{
+    background-color: #ffd976;
+    color: #fff;
+    border: none;
+}
 .productItem-name {
     color: #5e7d5f;
     font-size: 24px;
@@ -1262,11 +1281,13 @@ main {
     color: #ffffff;
     font-size: 20px;
     font-weight: 700;
+    margin-top: 5%;
 }
 /* Q and A form */
 .QAForm{
     width: 70%;
     margin: auto;
+    
 }
 .QAForm-form{
     margin: auto;
@@ -1298,6 +1319,7 @@ main {
     height: 43px;
     text-align: center;
     margin-top: 22px;
+    margin-bottom: 5%;
 }
 
 /* payment */
@@ -1882,6 +1904,19 @@ li {
     .shoppingbag {
         width: 80%;
     }
+    .productdetail-intro {
+        max-width: 100%;
+        width: 80%;
+        margin: auto;
+    }
+    .product-name,.product-price{
+        text-align: center;
+
+    }
+    .ant-row{
+        margin-left: 0%;
+    }
+
 }
 
 .container {

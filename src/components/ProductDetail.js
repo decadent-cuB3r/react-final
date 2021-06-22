@@ -42,19 +42,21 @@ function ProductDetail({ product }) {
         <Col lg={{ span: 8, offset: 1 }} xs={{ span: 21, offset: 1 }}>
           <div className="productdetail-intro">
             <h1 className="product-name product-name--large">{product.name}</h1>
-            <p className="product-description--border">
+            <p className="product-price product-price--large">
+                  ${product.price}.00
+                </p>
+            
               {product.description.map((description) => (
                 <div className="product-description">{description}</div>
               ))}
-            </p>
+            
             <div className="product-price-wrap">
               <div className="price-row">
-                <p className="product-price product-price--large">
-                  ${product.price}.00
-                </p>
+                
                 <p className="product-status">
                   商品囤貨: {product.countInStock > 0 ? "尚有存貨" : "已售罄"}
                 </p>
+                <p className="product-qty">總價: ${product.price * qty}</p>
               </div>
               <div className="price-row">
                 <div className="product-qty">
@@ -71,10 +73,10 @@ function ProductDetail({ product }) {
                     ))}
                   </Select>
                 </div>
-                <p className="product-qty">總價: ${product.price * qty}</p>
+                
               </div>
             </div>
-            <AddToCartComplex product={product} qty={qty} />
+            <AddToCartComplex  product={product} qty={qty} />
           </div>
         </Col>
       </Row>
