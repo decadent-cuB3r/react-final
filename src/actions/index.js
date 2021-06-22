@@ -260,12 +260,12 @@ export const addOrdertoFirebase = async (dispatch, cart) => {
 export const CommentRequest = async (dispatch, content) => {
   dispatch({ type: BEGIN_COMMENT_REQUEST });
   try {
-    const postInfo = await createComment(content);
+    const commentInfo = await createComment(content);
     dispatch({
       type: SUCCESS_COMMENT_REQUEST,
-      payload: postInfo
+      payload: commentInfo
     });
-    return postInfo;
+    return commentInfo;
   } catch (error) {
     console.log(error);
     dispatch({ type: FAIL_COMMENT_REQUEST, payload: error });
@@ -274,10 +274,10 @@ export const CommentRequest = async (dispatch, content) => {
 };
 
 export const setCommentList = async (dispatch) => {
-  const posts = await getComments();
+  const comments = await getComments();
   dispatch({
     type: SET_COMMENTS_LIST,
-    payload: { posts },
+    payload: { comments },
   });
 };
 

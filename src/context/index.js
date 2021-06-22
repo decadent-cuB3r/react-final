@@ -76,6 +76,14 @@ const initialState = {
     userInfo: null,
     error: "",
   },
+  commentInfo: {
+    loading: false,
+    success: false,
+    error: null,
+  },
+  commentPage: {
+    comments: [],
+  },
 };
 
 function reducer(state, action) {
@@ -210,43 +218,43 @@ function reducer(state, action) {
           error: action.payload,
         },
       };
-    // case BEGIN_COMMENT_REQUEST:
-    //   return {
-    //     ...state,
-    //     commentInfo: {
-    //       ...state.commentInfo,
-    //       loading: true,
-    //       success: false,
-    //     }
-    //   };
-    // case SUCCESS_COMMENT_REQUEST:
-    //   return {
-    //     ...state,
-    //     commentInfo: {
-    //       ...state.commentInfo,
-    //       loading: false,
-    //       success: true,
-    //       error: null,
-    //     },
-    //   };
-    // case FAIL_COMMENT_REQUEST:
-    //   return {
-    //     ...state,
-    //     commentInfo: {
-    //       ...state.commentInfo,
-    //       loading: false,
-    //       success: false,
-    //       error: action.payload,
-    //     },
-    //   };
-    // case SET_COMMENTS_LIST:
-    //   return {
-    //     ...state,
-    //     page: {
-    //       ...state.page,
-    //       ...action.payload
-    //     },
-    //   };
+    case BEGIN_COMMENT_REQUEST:
+      return {
+        ...state,
+        commentInfo: {
+          ...state.commentInfo,
+          loading: true,
+          success: false,
+        }
+      };
+    case SUCCESS_COMMENT_REQUEST:
+      return {
+        ...state,
+        commentInfo: {
+          ...state.commentInfo,
+          loading: false,
+          success: true,
+          error: null,
+        },
+      };
+    case FAIL_COMMENT_REQUEST:
+      return {
+        ...state,
+        commentInfo: {
+          ...state.commentInfo,
+          loading: false,
+          success: false,
+          error: action.payload,
+        },
+      };
+    case SET_COMMENTS_LIST:
+      return {
+        ...state,
+        commentPage: {
+          ...state.page,
+          ...action.payload
+        },
+      };
     case BEGIN_ORDER_CREATE:
       return { ...state, orderInfo: { ...state.orderInfo, loading: true } };
     case SUCCESS_ORDER_CREATE:
