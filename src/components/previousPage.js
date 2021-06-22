@@ -7,7 +7,7 @@ export default function PreviousButton() {
     history.goBack();
   };
   return (
-    <div className="previous-button">
+    <div onClick={goToPreviousPath} className="previous-button">
       <img className="ensp"src="/images/上一頁.png" alt="No-Warnings" />
       <div className="ensp">回上頁</div>
     </div>

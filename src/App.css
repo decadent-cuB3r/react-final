@@ -740,6 +740,7 @@ span.ham-menu-bar3--touch {
 
 .previous-button{
     display: flex;
+    cursor: pointer;
 }
 
 /* productdetail */
